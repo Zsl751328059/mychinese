@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - East Wellness Guide</title>
+    <title>Wellness Tips & Guides | Healthy Living</title>
+    <meta name="description" content="Discover wellness tips, guides, and insights on healthy living, sleep, relaxation, and self-care.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -12,43 +18,63 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.7;
+            color: #374151;
+            background-color: #ffffff;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 24px;
         }
 
         .btn {
             display: inline-block;
-            background-color: #2E7D32;
-            color: #fff;
-            padding: 12px 24px;
+            background: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
+            color: #111827;
+            padding: 16px 36px;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 12px;
             font-weight: 600;
-            transition: background-color 0.3s ease;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
+            font-size: 17px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 14px rgba(255, 153, 0, 0.25);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn:hover::before {
+            left: 100%;
         }
 
         .btn:hover {
-            background-color: #1B5E20;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(255, 153, 0, 0.35);
         }
 
         .navbar {
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            padding: 18px 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            border-bottom: 1px solid #f3f4f6;
         }
 
         .navbar .container {
@@ -58,45 +84,62 @@
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 24px;
             font-weight: 700;
-            color: #2E7D32;
+            color: #059669;
             text-decoration: none;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 36px;
         }
 
         .nav-links a {
-            color: #333;
+            color: #4B5563;
             text-decoration: none;
             font-weight: 500;
-            font-size: 16px;
-            transition: color 0.3s ease;
+            font-size: 15px;
+            transition: color 0.2s ease;
+            position: relative;
         }
 
         .nav-links a:hover {
-            color: #2E7D32;
+            color: #059669;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #059669;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .blog-header {
             padding: 80px 0;
             text-align: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8f5e9 100%);
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
         }
 
         .blog-header h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: #1B5E20;
+            font-size: 42px;
+            margin-bottom: 16px;
+            color: #1f2937;
+            font-weight: 600;
         }
 
         .blog-header p {
-            font-size: 20px;
-            color: #555;
+            font-size: 18px;
+            color: #4B5563;
             max-width: 600px;
             margin: 0 auto;
         }
@@ -105,85 +148,123 @@
             padding: 60px 0;
         }
 
+        .section-title {
+            font-size: 28px;
+            color: #111827;
+            margin-bottom: 32px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 6px;
+            height: 28px;
+            background: #059669;
+            border-radius: 3px;
+        }
+
         .blog-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 35px;
-            max-width: 1400px;
-            margin: 0 auto;
+            gap: 32px;
         }
 
         .blog-card {
-            background-color: #fff;
-            border-radius: 12px;
+            background: white;
+            border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
             transition: all 0.3s ease;
+            border: 1px solid #f3f4f6;
         }
 
         .blog-card:hover {
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+            transform: translateY(-6px);
         }
 
         .blog-card img {
             width: 100%;
             height: 220px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover img {
+            transform: scale(1.05);
         }
 
         .blog-content {
-            padding: 25px;
+            padding: 24px;
         }
 
         .blog-card h3 {
-            font-size: 22px;
-            margin-bottom: 15px;
-            color: #333;
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #1f2937;
             line-height: 1.3;
+            font-weight: 600;
         }
 
         .blog-card p {
-            color: #666;
-            margin-bottom: 20px;
+            color: #6B7280;
+            margin-bottom: 16px;
+            font-size: 15px;
+            line-height: 1.6;
         }
 
         .read-more {
-            color: #2E7D32;
+            color: #FF9900;
             text-decoration: none;
             font-weight: 600;
-            transition: color 0.3s ease;
+            font-size: 15px;
+            transition: color 0.2s ease;
         }
 
         .read-more:hover {
-            color: #1B5E20;
+            color: #f59e0b;
             text-decoration: underline;
         }
 
         .footer {
-            background-color: #263238;
-            color: #fff;
-            padding: 40px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: white;
+            padding: 60px 0 40px;
             text-align: center;
-            margin-top: 60px;
         }
 
-        .footer p {
-            margin-bottom: 10px;
-            font-size: 15px;
+        .footer a {
+            color: #c3cfe2;
+            text-decoration: none;
+            transition: color 0.2s ease;
         }
 
-        .disclaimer {
-            font-size: 13px;
-            color: #b0bec5;
-            max-width: 800px;
-            margin: 0 auto;
-            line-height: 1.5;
+        .footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 24px;
+            margin-top: 24px;
+            font-size: 14px;
+            color: #94a3b8;
         }
 
         @media (max-width: 768px) {
             .blog-header h1 {
-                font-size: 36px;
+                font-size: 32px;
             }
             
             .nav-links {
@@ -199,7 +280,7 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">East Wellness Guide</a>
+            <a href="index.html" class="logo">Healthy Living</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -210,14 +291,42 @@
 
     <section class="blog-header">
         <div class="container">
-            <h1>Wellness Blog</h1>
-            <p>Discover tips, guides, and insights on traditional Chinese wellness practices for modern life.</p>
+            <h1>Wellness Tips & Guides</h1>
+            <p>Discover expert tips, guides, and insights to help you live a healthier, more balanced life. From sleep improvement to stress relief, we've got you covered.</p>
         </div>
     </section>
 
     <section class="blog">
         <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
             <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="./imgs/精油扩散器.jpg" alt="Aromatherapy Guide">
+                    <div class="blog-content">
+                        <h3>Complete Aromatherapy Guide: 10 Best Essential Oils for Better Sleep</h3>
+                        <p>Discover the most effective essential oils for sleep and relaxation. Learn how to use an aromatherapy diffuser to create the perfect bedtime routine.</p>
+                        <a href="blog-aromatherapy.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="./imgs/yujiablog.jpg" alt="Yoga for Beginners">
+                    <div class="blog-content">
+                        <h3>15-Minute Yoga Routine for Stress Relief (Perfect for Beginners)</h3>
+                        <p>Simple, gentle yoga poses you can do at home. Includes modifications for all fitness levels and step-by-step instructions.</p>
+                        <a href="blog-yoga.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
+                <div class="blog-card">
+                    <img src="./imgs/加重毯.jpg" alt="Weighted Blanket Benefits">
+                    <div class="blog-content">
+                        <h3>How Weighted Blankets Work: Science Behind the Calming Effect</h3>
+                        <p>Learn about deep pressure stimulation and why weighted blankets help with anxiety, insomnia, and sensory processing disorders.</p>
+                        <a href="blog-weighted-blanket.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+
                 <div class="blog-card">
                     <img src="./imgs/guasha.jpeg" alt="How to Use a Gua Sha Stone">
                     <div class="blog-content">
@@ -226,7 +335,7 @@
                         <a href="blog-gua-sha.html" class="read-more">Read More →</a>
                     </div>
                 </div>
-                
+
                 <div class="blog-card">
                     <img src="./imgs/tea.jpeg" alt="Best Chinese Herbal Teas">
                     <div class="blog-content">
@@ -235,7 +344,7 @@
                         <a href="blog-herbal-teas.html" class="read-more">Read More →</a>
                     </div>
                 </div>
-                
+
                 <div class="blog-card">
                     <img src="./imgs/aijiu.jpeg" alt="Moxibustion Benefits">
                     <div class="blog-content">
@@ -250,16 +359,25 @@
 
     <footer class="footer">
         <div class="container">
-            <p><a href="index.html" style="color: #fff; text-decoration: none; font-weight: 600;">Healthy Living</a></p>
-            <p>&copy; 2026 Healthy Living. All rights reserved.</p>
-            <p class="disclaimer">This website contains affiliate links. We may earn a small commission if you purchase through these links, at no extra cost to you. This helps us continue to provide free wellness content. All information on this site is for educational purposes only and is not intended as medical advice.</p>
-            <p style="font-size: 14px; margin-top: 15px;">
-                <a href="privacy-policy.html">Privacy Policy</a> | 
-                <a href="cookie-policy.html">Cookie Policy</a> | 
-                <a href="terms-conditions.html">Terms & Conditions</a> | 
-                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a> | 
+            <p style="font-size: 24px; font-weight: 700; margin-bottom: 24px;">Healthy Living</p>
+            <p style="margin-bottom: 32px; color: #c3cfe2;">Your trusted source for honest product reviews and wellness tips</p>
+            
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="cookie-policy.html">Cookie Policy</a>
+                <a href="terms-conditions.html">Terms & Conditions</a>
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
                 <a href="sitemap.html">Sitemap</a>
-            </p>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Healthy Living. All rights reserved.</p>
+                <p style="margin-top: 8px;">As an AliExpress Affiliate, we earn from qualifying purchases.</p>
+            </div>
         </div>
     </footer>
 </body>
