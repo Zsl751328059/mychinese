@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions - Zen Well Body</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #2E7D32;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2E7D32;
+        }
+
+        .page {
+            padding: 80px 0;
+        }
+
+        .page h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1B5E20;
+            text-align: center;
+        }
+
+        .page-intro {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-section {
+            margin-bottom: 50px;
+        }
+
+        .faq-section h2 {
+            font-size: 24px;
+            color: #2E7D32;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .faq-item {
+            margin-bottom: 24px;
+            padding: 24px;
+            background-color: #f8f9fa;
+            border-radius: 12px;
+            border-left: 4px solid #2E7D32;
+        }
+
+        .faq-item h3 {
+            font-size: 19px;
+            color: #1B5E20;
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .faq-item p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 0;
+        }
+
+        .faq-item a {
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-cta {
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: #fff;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .contact-cta h2 {
+            font-size: 26px;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .contact-cta p {
+            font-size: 17px;
+            margin-bottom: 24px;
+            opacity: 0.95;
+        }
+
+        .contact-cta .btn {
+            display: inline-block;
+            background-color: #fff;
+            color: #2E7D32;
+            padding: 14px 32px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-cta .btn:hover {
+            background-color: #f0fdf4;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            background-color: #263238;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page h1 {
+                font-size: 28px;
+            }
+            
+            .faq-item {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Zen Well Body</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page">
+        <div class="container">
+            <h1>Frequently Asked Questions</h1>
+            <p class="page-intro">Find answers to the most common questions about Zen Well Body, our reviews, and how we can help you find the best wellness products.</p>
+
+            <div class="faq-section">
+                <h2>About Zen Well Body</h2>
+                
+                <div class="faq-item">
+                    <h3>What is Zen Well Body?</h3>
+                    <p>Zen Well Body is a wellness review website dedicated to helping people find high-quality traditional Chinese wellness products. We research, test, and review products like jade gua sha stones, herbal teas, ox horn combs, moxibustion boxes, and herbal sachets to help you make informed purchasing decisions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do you select products to review?</h3>
+                    <p>We carefully select products based on their quality, customer reviews, value for money, and alignment with traditional wellness practices. We purchase and test products ourselves whenever possible, and we analyze thousands of customer reviews to identify the best options for our readers.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is Zen Well Body a store?</h3>
+                    <p>No, we are not an online store. We are a review and recommendation website. When we recommend products, we direct you to purchase them from trusted retailers like Amazon, where you can benefit from their buyer protection and fast shipping.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Affiliate & Compensation</h2>
+                
+                <div class="faq-item">
+                    <h3>Do you earn money from product recommendations?</h3>
+                    <p>Yes, we participate in affiliate marketing programs, including the Amazon Associates Program. When you purchase products through our links, we may earn a small commission at no extra cost to you. This is how we keep our website running and continue to provide free, valuable content. <a href="affiliate-disclaimer.html">Read our full Affiliate Disclaimer</a></p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does affiliate compensation affect your reviews?</h3>
+                    <p>No. Our editorial content is completely independent from our affiliate relationships. We only recommend products we genuinely believe in and would use ourselves. Our reviews and recommendations are based on thorough research and real-world testing, not on how much commission we might earn.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Products & Recommendations</h2>
+                
+                <div class="faq-item">
+                    <h3>Are your product recommendations based on testing?</h3>
+                    <p>Whenever possible, we purchase and personally test products to provide firsthand experience. For products we haven't tested directly, we base our recommendations on extensive research, ingredient analysis, customer reviews, and comparison with similar products.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How often do you update your reviews?</h3>
+                    <p>We regularly review and update our content to ensure accuracy. Product prices, availability, and customer reviews change frequently, so we revisit our key product pages at least quarterly and make updates as needed.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I trust your product recommendations?</h3>
+                    <p>We take trust seriously. We only recommend products that meet our high standards for quality, value, and authenticity. We clearly indicate when we haven't personally tested a product and always encourage readers to do their own research before making purchase decisions.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Orders & Shipping</h2>
+                
+                <div class="faq-item">
+                    <h3>I purchased a product through your link - where's my order?</h3>
+                    <p>Since we don't sell products directly, we don't handle orders or shipping. Your purchase is made through the retailer's website (like Amazon). Please check your order confirmation email for tracking information, or contact the retailer directly for order-related questions.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>The product I bought isn't what I expected. Can you help?</h3>
+                    <p>For issues with your order, please contact the retailer where you made the purchase. Most retailers like Amazon have generous return policies and customer service teams that can help resolve issues with orders, returns, or refunds.</p>
+                </div>
+            </div>
+
+            <div class="faq-section">
+                <h2>Website & Content</h2>
+                
+                <div class="faq-item">
+                    <h3>Is the information on your website medical advice?</h3>
+                    <p>No. The content on Zen Well Body is for informational purposes only and should not be considered medical advice. Our wellness products are not intended to diagnose, treat, cure, or prevent any disease. Please consult a qualified healthcare professional for medical advice.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How can I get in touch with you?</h3>
+                    <p>We love hearing from our readers! You can contact us through our <a href="contact.html">Contact Page</a>. Whether you have questions, feedback, or product suggestions, we're here to help.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I republish content from your website?</h3>
+                    <p>Our content is protected by copyright. If you'd like to share our content, please contact us for permission. We generally allow sharing of our content for non-commercial purposes with proper attribution and a link to the original source.</p>
+                </div>
+            </div>
+
+            <div class="contact-cta">
+                <h2>Still Have Questions?</h2>
+                <p>If you couldn't find the answer to your question, feel free to reach out to us directly.</p>
+                <a href="contact.html" class="btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="index.html">Zen Well Body</a></p>
+            <p>&copy; 2026 Zen Well Body. All rights reserved.</p>
+            <p>
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="cookie-policy.html">Cookie Policy</a> | 
+                <a href="terms-conditions.html">Terms & Conditions</a> | 
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zen Well Body</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 18px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #2E7D32;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #2E7D32;
+        }
+
+        .page {
+            padding: 80px 0;
+        }
+
+        .page h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #1B5E20;
+            text-align: center;
+        }
+
+        .page-intro {
+            text-align: center;
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .contact-card {
+            background-color: #f8f9fa;
+            padding: 32px;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+        }
+
+        .contact-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+        }
+
+        .contact-card h3 {
+            font-size: 18px;
+            color: #1B5E20;
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            font-size: 15px;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        .contact-card a {
+            color: #2E7D32;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-card a:hover {
+            text-decoration: underline;
+        }
+
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 48px;
+            border-radius: 16px;
+        }
+
+        .form-section h2 {
+            font-size: 24px;
+            color: #1B5E20;
+            margin-bottom: 32px;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 24px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            font-size: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 8px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #2E7D32;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #2E7D32 0%, #1B5E20 100%);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(46, 125, 50, 0.3);
+        }
+
+        .info-section {
+            margin-top: 60px;
+            padding-top: 60px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .info-section h2 {
+            font-size: 24px;
+            color: #1B5E20;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .info-item h3 {
+            font-size: 18px;
+            color: #2E7D32;
+            margin-bottom: 12px;
+        }
+
+        .info-item p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .footer {
+            background-color: #263238;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .page h1 {
+                font-size: 28px;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-section {
+                padding: 32px 24px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Zen Well Body</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="page">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p class="page-intro">We'd love to hear from you! Whether you have questions, feedback, or product suggestions, feel free to reach out.</p>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:hello@zenwellbody.com">hello@zenwellbody.com</a></p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Social Media</h3>
+                    <p>Follow us on social media for updates and wellness tips</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">📍</div>
+                    <h3>Location</h3>
+                    <p>United States</p>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Send Us a Message</h2>
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a topic</option>
+                            <option value="general">General Inquiry</option>
+                            <option value="product">Product Question</option>
+                            <option value="feedback">Feedback / Suggestions</option>
+                            <option value="affiliate">Affiliate Inquiry</option>
+                            <option value="press">Press / Media</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+
+            <div class="info-section">
+                <h2>How We Can Help</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <h3>Questions About Products</h3>
+                        <p>Not sure which wellness product is right for you? We can help you understand the benefits of different traditional Chinese wellness tools and guide you toward the best choice for your needs.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Affiliate Partnerships</h3>
+                        <p>Interested in partnering with us? We work with brands that share our commitment to quality and authenticity. Reach out to discuss potential collaboration opportunities.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Content Feedback</h3>
+                        <p>Found inaccurate information or have suggestions for topics you'd like us to cover? We appreciate any feedback that helps us improve our content and serve you better.</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Press & Media</h3>
+                        <p>Are you a journalist or content creator interested in traditional Chinese wellness? We'd love to connect and share our expertise on wellness products and practices.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p><a href="index.html">Zen Well Body</a></p>
+            <p>&copy; 2026 Zen Well Body. All rights reserved.</p>
+            <p>
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="cookie-policy.html">Cookie Policy</a> | 
+                <a href="terms-conditions.html">Terms & Conditions</a> | 
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

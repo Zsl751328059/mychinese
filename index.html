@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zen Well Body - Wellness & Healthy Home Essentials</title>
+    <meta name="description" content="Transform your home into a wellness sanctuary. Sleep better, relax deeper, and live healthier with curated home essentials, aromatherapy, yoga gear, and smart storage solutions.">
+    <meta name="keywords" content="weighted blanket, aromatherapy diffuser, yoga mat, health storage, sleep better, wellness home, home spa, massage gun, gua sha">
+    <style>
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+}
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* 按钮：清新薄荷绿，不发灰 */
+.btn {
+    display: inline-block;
+    background-color: #34a873;
+    color: #fff;
+    padding: 12px 28px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn:hover {
+    background-color: #1e7d54;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(52, 168, 115, 0.25);
+}
+.btn-secondary {
+    background-color: transparent;
+    color: #34a873;
+    border: 1px solid #34a873;
+}
+.btn-secondary:hover {
+    background-color: #34a873;
+    color: #fff;
+}
+.view-more-container {
+    text-align: center;
+    margin-top: 40px;
+}
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 26px;
+    font-weight: 600;
+    color: #1f2937;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+.nav-links a {
+    color: #444;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #34a873;
+}
+.hero {
+    padding: 90px 0;
+    background-color: #f9faf9;
+}
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    max-width: 1200px;
+}
+.hero-content {
+    flex: 1;
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 22px;
+    color: #1f2937;
+    line-height: 1.25;
+    font-weight: 500;
+}
+.hero-tagline {
+    font-size: 22px;
+    margin-bottom: 14px;
+    color: #34a873;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+.hero-subtagline {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #666;
+    font-weight: 400;
+}
+.hero p {
+    font-size: 17px;
+    margin-bottom: 38px;
+    color: #555;
+    line-height: 1.8;
+    max-width: 600px;
+}
+.categories {
+    padding: 70px 0;
+    background-color: #ffffff;
+}
+.categories h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 45px;
+    color: #1f2937;
+    font-weight: 500;
+}
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.category-card {
+    background-color: #f9faf9;
+    color: #1f2937;
+    padding: 42px 30px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid #f0f0f0;
+}
+.category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+    background-color: #fff;
+}
+.category-icon {
+    font-size: 52px;
+    margin-bottom: 20px;
+    color: #34a873;
+}
+.category-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.category-card p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+}
+.products {
+    padding: 80px 0;
+    background-color: #f9faf9;
+}
+.section-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+    color: #1f2937;
+    font-weight: 500;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.product-card {
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    padding: 22px;
+    padding-bottom: 75px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 510px;
+}
+.product-card:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+    transform: translateY(-4px);
+    border-color: #34a873;
+}
+.product-card img {
+    max-width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+.product-card h3 {
+    font-size: 19px;
+    margin-bottom: 12px;
+    color: #333;
+    min-height: 48px;
+    font-weight: 500;
+}
+.price {
+    font-size: 23px;
+    font-weight: 600;
+    color: #34a873;
+    margin-bottom: 14px;
+}
+.description {
+    margin-bottom: 18px;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.55;
+}
+.product-card .btn {
+    position: absolute;
+    bottom: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 44px);
+    padding: 10px 0;
+}
+.product-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background-color: #34a873;
+    color: white;
+    padding: 5px 11px;
+    border-radius: 18px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.blog {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 32px;
+}
+.blog-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    min-height: 410px;
+    border: 1px solid #f0f0f0;
+}
+.blog-card:hover {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.07);
+    transform: translateY(-4px);
+}
+.blog-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+.blog-content {
+    padding: 24px;
+    padding-bottom: 75px;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 210px);
+    position: relative;
+}
+.blog-card h3 {
+    font-size: 19px;
+    margin-bottom: 14px;
+    color: #333;
+    line-height: 1.35;
+    min-height: 48px;
+    font-weight: 500;
+}
+.blog-card p {
+    color: #666;
+    margin-bottom: 18px;
+    flex-grow: 1;
+    line-height: 1.6;
+    font-size: 15px;
+}
+.read-more {
+    color: #059669;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    font-size: 15px;
+    z-index: 1;
+}
+.read-more:hover {
+    color: #047857;
+    text-decoration: underline;
+}
+.features-section {
+    padding: 60px 0;
+    background-color: #f9faf9;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 24px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.feature-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
+.feature-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.feature-icon {
+    font-size: 34px;
+    margin-bottom: 12px;
+    color: #34a873;
+}
+.feature-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    letter-spacing: 0.4px;
+}
+.footer {
+    background-color: #1f2937;
+    color: #fff;
+    padding: 45px 0;
+    text-align: center;
+}
+.footer p {
+    margin-bottom: 10px;
+    font-size: 15px;
+    opacity: 0.9;
+}
+.footer a {
+    color: #c8d8cf;
+    text-decoration: none;
+}
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.disclaimer {
+    font-size: 13px;
+    color: #b8c7bf;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.55;
+}
+@media (max-width: 768px) {
+    .hero .container {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .hero h1 {
+        font-size: 32px;
+    }
+    .hero-tagline {
+        font-size: 20px;
+    }
+    .hero-subtagline {
+        font-size: 16px;
+    }
+    .hero p {
+        font-size: 16px;
+    }
+    .hero-image {
+        order: -1;
+    }
+    .section-title {
+        font-size: 32px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Zen Well Body</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Transform Your Home Into a Wellness Sanctuary</h1>
+                <div class="hero-tagline">Better Sleep · Deep Relaxation · Healthy Living</div>
+                <div class="hero-subtagline">Curated Essentials for Your Well-Being</div>
+                <p>Create your own home spa experience. Discover the best sleep aids, relaxation tools, yoga gear, and smart storage solutions that make healthy living effortless and beautiful.</p>
+                <a href="#products" class="btn">Shop Our Top Recommendations</a>
+            </div>
+            <!-- 替换为女性舒展、伸懒腰、居家放松风格图片 -->
+            <div class="hero-image">
+                <!-- <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68723?w=520&h=420&fit=crop" alt="Woman stretching and relaxing at home"> -->
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <div class="container">
+            <h2>Explore by Category</h2>
+            <div class="category-grid">
+                <a href="#sleep" class="category-card">
+                    <div class="category-icon">🌙</div>
+                    <h3>Sleep & Relaxation</h3>
+                    <p>Weighted blankets, eye masks, earplugs, aromatherapy diffusers & more</p>
+                </a>
+                <a href="#body" class="category-card">
+                    <div class="category-icon">💆</div>
+                    <h3>Body & Fitness</h3>
+                    <p>Yoga mats, massage guns, foam rollers, body care essentials</p>
+                </a>
+                <a href="#home" class="category-card">
+                    <div class="category-icon">🏠</div>
+                    <h3>Wellness Home</h3>
+                    <p>Healthy storage solutions, medicine organizers, kitchen containers</p>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="products" class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Wellness Essentials</h2>
+            <div class="product-grid">
+                <div class="product-card" id="sleep">
+                    <span class="product-badge">Best Seller</span>
+                    <img src="./imgs/精油扩散器.jpg" alt="Aromatherapy Diffuser">
+                    <h3>Ultrasonic Aromatherapy Diffuser</h3>
+                    <p class="price">24.99</p>
+                    <p class="description">Whisper-quiet essential oil diffuser with 7 color LED lights. Creates a calming atmosphere with auto-shutoff safety feature. Perfect for bedrooms and meditation spaces.</p>
+                    <a href="product-aromatherapy.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <span class="product-badge">⭐ Top Rated</span>
+                    <img src="./imgs/加重毯.jpg" alt="Weighted Blanket">
+                    <h3>Premium Weighted Blanket</h3>
+                    <p class="price">$59.99</p>
+                    <p class="description">Calming 15lb weighted blanket for adults. Evenly distributed glass beads provide deep pressure stimulation. Reduces anxiety and improves sleep quality instantly.</p>
+                    <a href="product-weighted-blanket.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <span class="product-badge">New</span>
+                    <img src="./imgs/牛角按摩.jpg" alt="Natural Ox Horn Massage Comb">
+                    <h3>Natural Ox Horn Massage Comb</h3>
+                    <p class="price">$18.99</p>
+                    <p class="description">Handcrafted ox horn comb for scalp massage. Stimulates blood circulation, reduces hair loss, and relieves stress. Promotes healthy hair growth naturally.</p>
+                    <a href="product-horn-comb.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card" id="body">
+                    <span class="product-badge">Popular</span>
+                    <img src="./imgs/瑜伽.jpg" alt="Yoga Mat">
+                    <h3>Premium Non-Slip Yoga Mat</h3>
+                    <p class="price">$49.99</p>
+                    <p class="description">Extra thick 6mm eco-friendly yoga mat with alignment lines. Perfect for yoga, pilates, and floor exercises. Non-slip surface for safe practice at home.</p>
+                    <a href="product-yoga-mat.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="./imgs/guasha.jpeg" alt="Premium Jade Gua Sha Stone">
+                    <h3>Premium Jade Gua Sha Stone</h3>
+                    <p class="price">$24.99</p>
+                    <p class="description">Hand-carved natural jade gua sha tool for facial and body massage. Reduces puffiness, improves circulation, and relieves muscle tension. Perfect for daily self-care routines.</p>
+                    <a href="product-gua-sha.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <span class="product-badge">⭐ Top Rated</span>
+                    <img src="./imgs/按摩枪.jpg" alt="Massage Gun">
+                    <h3>Deep Tissue Massage Gun</h3>
+                    <p class="price">$89.99</p>
+                    <p class="description">Professional percussive therapy with 5 speed levels and 6 interchangeable heads. Relieves muscle soreness and improves flexibility in 10 minutes or less.</p>
+                    <a href="product-massage-gun.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card" id="sleep">
+                    <span class="product-badge">New</span>
+                    <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=220&fit=crop" alt="Sleep Eye Mask">
+                    <h3>3D Contoured Sleep Eye Mask</h3>
+                    <p class="price">$19.99</p>
+                    <p class="description">Zero pressure 3D memory foam eye mask. Blocks 100% of light for uninterrupted sleep. Breathable design with adjustable strap. Travel and nap friendly.</p>
+                    <a href="product-sleep-mask.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card" id="home">
+                    <span class="product-badge">Best Seller</span>
+                    <img src="./imgs/储存.jpg" alt="Airtight Food Containers">
+                    <h3>Airtight Food Storage Containers</h3>
+                    <p class="price">$39.99</p>
+                    <p class="description">24-piece BPA-free kitchen storage set. Perfect for grains, supplements, and dry goods. Airtight seal keeps food fresh longer. Stackable design saves space.</p>
+                    <a href="product-storage-containers.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929?w=300&h=220&fit=crop" alt="Organic Sleep Herbal Tea">
+                    <h3>Organic Calming Herbal Tea</h3>
+                    <p class="price">$15.99</p>
+                    <p class="description">Blend of chamomile, lavender, and valerian root. Naturally calms anxiety, reduces stress, and promotes deep, restful sleep. Caffeine-free and 100% organic.</p>
+                    <a href="product-herbal-tea.html" class="btn">View Details</a>
+                </div>
+                <div class="product-card" id="sleep">
+                    <span class="product-badge">✨ Popular</span>
+                    <img src="https://images.unsplash.com/photo-1493666438817-866a91353ca9?w=300&h=220&fit=crop" alt="Star Projector Lamp">
+                    <h3>Galaxy Star Projector Lamp</h3>
+                    <p class="price">$45.99</p>
+                    <p class="description">Transform your bedroom into a starry galaxy. 8 lighting modes with ocean wave effects. Perfect for relaxation, meditation, and magical ambiance.</p>
+                    <a href="product-galaxy-lamp.html" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="view-more-container">
+                <a href="sitemap.html" class="btn btn-secondary">See All Products →</a>
+            </div>
+        </div>
+    </section>
+    <section class="blog">
+        <div class="container">
+            <h2 class="section-title">Wellness Tips & Guides</h2>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1582582494701-f2a856e8e4f1?w=400&h=220&fit=crop" alt="Aromatherapy Guide">
+                    <div class="blog-content">
+                        <h3>Complete Aromatherapy Guide: 10 Best Essential Oils for Better Sleep</h3>
+                        <p>Discover the most effective essential oils for sleep and relaxation. Learn how to use an aromatherapy diffuser to create the perfect bedtime routine.</p>
+                        <a href="blog.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=220&fit=crop" alt="Yoga for Beginners">
+                    <div class="blog-content">
+                        <h3>15-Minute Yoga Routine for Stress Relief (Perfect for Beginners)</h3>
+                        <p>Simple, gentle yoga poses you can do at home. Includes modifications for all fitness levels and step-by-step instructions.</p>
+                        <a href="blog.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?w=400&h=220&fit=crop" alt="Weighted Blanket Benefits">
+                    <div class="blog-content">
+                        <h3>How Weighted Blankets Work: Science Behind the Calming Effect</h3>
+                        <p>Learn about deep pressure stimulation and why weighted blankets help with anxiety, insomnia, and sensory processing disorders.</p>
+                        <a href="blog.html" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">😴</div>
+                    <div class="feature-text">Better Sleep</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🧘</div>
+                    <div class="feature-text">Stress Relief</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💪</div>
+                    <div class="feature-text">Muscle Recovery</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🏠</div>
+                    <div class="feature-text">Home Wellness</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <div class="feature-text">Curated Quality</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🚚</div>
+                    <div class="feature-text">Fast Shipping</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💚</div>
+                    <div class="feature-text">Eco-Friendly</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <div class="feature-text">Trusted Brands</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-text">Top Rated</div>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-text">Expert Reviews</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="index.html" style="color: #fff; text-decoration: none; font-weight: 500;">Zen Well Body</a></p>
+            <p>&copy; 2026 Zen Well Body. All rights reserved.</p>
+            <p class="disclaimer">This website contains affiliate links. We may earn a small commission if you purchase through these links, at no extra cost to you. This helps us continue to provide free wellness content. All information on this site is for educational purposes only.</p>
+            <p style="font-size: 14px; margin-top: 15px;">
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="cookie-policy.html">Cookie Policy</a> | 
+                <a href="terms-conditions.html">Terms & Conditions</a> | 
+                <a href="affiliate-disclaimer.html">Affiliate Disclaimer</a> | 
+                <a href="sitemap.html">Sitemap</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
