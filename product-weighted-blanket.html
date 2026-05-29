@@ -6,6 +6,22 @@
     <title>YnM Weighted Blanket (15 lbs) | Best for Anxiety & Better Sleep 2026</title>
     <meta name="description" content="YnM Weighted Blanket (15 lbs) - Natural sleep aid for adults. Get better sleep with deep pressure stimulation that boosts melatonin and reduces anxiety.">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://healthyliving.com/best-weighted-blanket">
+    <meta property="og:title" content="YnM Weighted Blanket (15 lbs) | Best for Anxiety & Better Sleep 2026">
+    <meta property="og:description" content="YnM Weighted Blanket (15 lbs) - Natural sleep aid for adults. Get better sleep with deep pressure stimulation. 49,508+ reviews on Amazon.">
+    <meta property="og:image" content="./imgs/tanzi/S291bfcc4987f4f13982b15ce212e4ccbf.jpg">
+    <meta property="og:image:width" content="1500">
+    <meta property="og:image:height" content="1500">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://healthyliving.com/best-weighted-blanket">
+    <meta name="twitter:title" content="YnM Weighted Blanket (15 lbs) | Best for Anxiety & Better Sleep 2026">
+    <meta name="twitter:description" content="YnM Weighted Blanket (15 lbs) - Natural sleep aid for adults. Get better sleep with deep pressure stimulation. 49,508+ reviews on Amazon.">
+    <meta name="twitter:image" content="./imgs/tanzi/S291bfcc4987f4f13982b15ce212e4ccbf.jpg">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -32,7 +48,85 @@
         "@type": "AggregateRating",
         "ratingValue": "4.6",
         "reviewCount": "49508"
-      }
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Julia Rose"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Best value and very comfortable! I'm almost positive I bought 3 in the span of a week because people keep trying it and trying to take mine.",
+          "datePublished": "2026-05-22"
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Lyn85"
+          },
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5",
+            "bestRating": "5"
+          },
+          "reviewBody": "Great weighted blanket. Bought 3 of the grey 15 lb weighted blankets. They came well packaged.",
+          "datePublished": "2025-12-06"
+        }
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How heavy should my weighted blanket be?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We recommend 10% of your body weight plus 1 pound. For most adults (130-160lbs), 15 lbs is ideal. If you're between sizes or prefer deeper pressure, size up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I sleep with it every night?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Thousands of users report sleeping with it nightly. With proper care, it's designed for regular use and will maintain its effectiveness over time."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I clean it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Machine wash on gentle cycle with mild detergent. Tumble dry on low or line dry. For best results, use a duvet cover to protect the blanket and only wash the cover regularly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will it make me too hot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The YnM uses cooling glass beads and breathable construction to prevent overheating. It's designed for year-round comfort, even for warm sleepers."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this a good gift?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Absolutely! Weighted blankets make thoughtful gifts for birthdays, holidays, graduations, or any occasion. They're especially appreciated by those dealing with stress or sleep issues."
+          }
+        }
+      ]
     }
     </script>
     
@@ -415,6 +509,12 @@
         }
         .check { color: #059669; font-weight: bold; }
         .cross { color: #EF4444; font-weight: bold; }
+        .comparison-table .ynm-col {
+            background-color: #f0fdf4;
+        }
+        .comparison-table th.ynm-col {
+            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+        }
 
         .section-title::before {
             content: '';
@@ -654,6 +754,66 @@
             color: #9ca3af;
         }
 
+        /* Cookie Banner */
+        .cookie-banner {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            background: #1f2937;
+            color: #f3f4f6;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            z-index: 9999;
+            max-width: 600px;
+            margin: 0 auto;
+            display: none;
+        }
+        .cookie-banner.active {
+            display: block;
+            animation: slideUp 0.3s ease-out;
+        }
+        @keyframes slideUp {
+            from {
+                transform: translateY(20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .cookie-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .cookie-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .cookie-btn.accept {
+            background: linear-gradient(135deg, #FF9900 0%, #FFB84D 100%);
+            color: #111827;
+        }
+        .cookie-btn.accept:hover {
+            transform: translateY(-2px);
+        }
+        .cookie-btn.decline {
+            background: transparent;
+            color: #9ca3af;
+            border: 1px solid #4b5563;
+        }
+        .cookie-btn.decline:hover {
+            background: #374151;
+        }
+
         @media (max-width: 768px) {
             .product-hero {
                 grid-template-columns: 1fr;
@@ -697,6 +857,12 @@
                 padding: 16px 12px;
                 font-size: 14px;
             }
+
+            .cookie-banner {
+                left: 10px;
+                right: 10px;
+                bottom: 10px;
+            }
         }
     </style>
 </head>
@@ -715,10 +881,13 @@
 
     <section class="product-page">
         <div class="container">
+            <div style="background-color: #f9fafb; padding: 16px; border-radius: 12px; font-size: 13px; color: #6B7280; margin-bottom: 32px; line-height: 1.6; border: 1px solid #e5e7eb;">
+                <strong>Amazon Affiliate Disclosure:</strong> Healthy Living is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click on our links and make a purchase on Amazon, we may earn a small commission at no extra cost to you.
+            </div>
             <div class="product-hero">
                 <div class="product-image-container">
                     <span class="badge">🔥 On Sale</span>
-                    <img src="./imgs/tanzi/S291bfcc4987f4f13982b15ce212e4ccbf.jpg" alt="YnM 15 lbs weighted blanket for better sleep" class="product-image">
+                    <img src="https://m.media-amazon.com/images/I/71JHycM1doL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket for better sleep" class="product-image">
                     <div class="trust-badges">
                         <div class="trust-badge">
                             <span class="trust-badge-icon">🚚</span>
@@ -851,7 +1020,7 @@
                     <thead>
                         <tr>
                             <th>Feature</th>
-                            <th>YnM (Our Pick)</th>
+                            <th class="ynm-col">YnM (Our Pick)</th>
                             <th>Budget Options (&lt;$20)</th>
                             <th>Premium Brands (&gt;$100)</th>
                         </tr>
@@ -859,31 +1028,31 @@
                     <tbody>
                         <tr>
                             <td>Weight Distribution</td>
-                            <td class="check">✓ Micro-compartments prevent shifting & clumping</td>
+                            <td class="check ynm-col">✓ Micro-compartments prevent shifting & clumping</td>
                             <td class="cross">✗ Beads shift, clump, uneven pressure</td>
                             <td class="check">✓ Good, but overpriced</td>
                         </tr>
                         <tr>
                             <td>Materials</td>
-                            <td class="check">✓ Premium glass beads, skin-safe fabric</td>
+                            <td class="check ynm-col">✓ Premium glass beads, skin-safe fabric</td>
                             <td class="cross">✗ Cheap polyester, questionable beads, off-gassing</td>
                             <td class="check">✓ Premium, but similar to YnM</td>
                         </tr>
                         <tr>
                             <td>Breathability</td>
-                            <td class="check">✓ Cooling design for year-round use</td>
+                            <td class="check ynm-col">✓ Cooling design for year-round use</td>
                             <td class="cross">✗ Traps heat, rustling noise</td>
                             <td class="check">✓ Good, but not better than YnM</td>
                         </tr>
                         <tr>
                             <td>Durability</td>
-                            <td class="check">✓ 7-layer construction, precision stitching</td>
+                            <td class="check ynm-col">✓ 7-layer construction, precision stitching</td>
                             <td class="cross">✗ Thin fabric pills/tears, stitching fails, leaks beads</td>
                             <td class="check">✓ Durable, but overkill for most</td>
                         </tr>
                         <tr>
                             <td>Value for Money</td>
-                            <td class="check">✓ Excellent - best bang for buck</td>
+                            <td class="check ynm-col">✓ Excellent - best bang for buck</td>
                             <td class="cross">✗ False economy - needs replacement</td>
                             <td class="cross">✗ Overpriced - paying for brand</td>
                         </tr>
@@ -970,30 +1139,30 @@
                     Transparency is important to us. Based on our testing, here are 3 types of weighted blankets we advise against:
                 </p>
                 <div style="background: #f9fafb; border-radius: 16px; padding: 24px; margin-bottom: 24px;">
-                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 1. 低于 $20 的廉价款</h4>
+                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 1. Budget Options Under $20</h4>
                     <p style="font-size: 15px; color: #6B7280; margin-bottom: 8px;">
-                        <strong>Why we don't recommend:</strong> 商家不可能亏钱卖你。这些低价产品通常使用劣质材料——薄如蝉翼的面料、不均匀的玻璃珠分布、松散的缝线。我们测试的几款低价毯在洗了2次后就开始漏珠，有的甚至洗一次就报废了。你以为捡了便宜，其实是浪费钱。
+                        <strong>Why we don't recommend:</strong> Quality manufacturing costs money. These low-priced products typically use inferior materials—thin fabric, uneven glass bead distribution, and loose stitching. Several budget blankets we tested started leaking beads after just 2 washes, and some failed after a single wash cycle.
                     </p>
                     <p style="font-size: 14px; color: #9CA3AF;">
-                        <strong>常见问题:</strong> 漏珠、结块、面料起球、有异味
+                        <strong>Common issues:</strong> Bead leakage, clumping, fabric pilling, unpleasant odors
                     </p>
                 </div>
                 <div style="background: #f9fafb; border-radius: 16px; padding: 24px; margin-bottom: 24px;">
-                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 2. 价格过高的"高端款"（$100+）</h4>
+                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 2. Overpriced "Premium" Brands ($100+)</h4>
                     <p style="font-size: 15px; color: #6B7280; margin-bottom: 8px;">
-                        <strong>Why we don't recommend:</strong> 很多高价产品的成本其实和中端产品差不多，你花的钱大部分都进了营销和品牌溢价的口袋。我们测试过几款$100+的毯子，性能和YnM几乎没有区别，但价格贵了5倍。没必要为一个名字多花这么多钱。
+                        <strong>Why we don't recommend:</strong> Many expensive products use similar materials to mid-range options. Most of what you're paying for goes toward marketing and brand markup. We tested several $100+ blankets and found they performed nearly identically to the YnM—yet cost 5 times more.
                     </p>
                     <p style="font-size: 14px; color: #9CA3AF;">
-                        <strong>真相:</strong> 同样的玻璃珠、类似的面料、几乎相同的重量分布评分
+                        <strong>The truth:</strong> Same glass beads, similar fabric, nearly identical weight distribution performance
                     </p>
                 </div>
                 <div style="background: #f9fafb; border-radius: 16px; padding: 24px; margin-bottom: 24px;">
-                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 3. 销量太少的新品</h4>
+                    <h4 style="color: #991B1B; margin-bottom: 12px;">❌ 3. New Products with Low Sales Volume</h4>
                     <p style="font-size: 15px; color: #6B7280; margin-bottom: 8px;">
-                        <strong>Why we don't recommend:</strong> 没有足够的用户反馈，你就像是在当小白鼠。新品可能存在设计缺陷或质量问题，这些都需要时间和大量用户才能暴露出来。我们优先选择至少有5000+评价的产品，这样更有保障。
+                        <strong>Why we don't recommend:</strong> Without sufficient customer feedback, you're essentially a beta tester. New products may have design flaws or quality issues that only emerge over time with heavy use. We prioritize products with at least 5,000+ reviews for better reliability.
                     </p>
                     <p style="font-size: 14px; color: #9CA3AF;">
-                        <strong>建议:</strong> 选择至少5000+评价、评分4.4+的产品
+                        <strong>Our recommendation:</strong> Choose products with at least 5,000+ reviews and 4.4+ stars
                     </p>
                 </div>
 
@@ -1032,7 +1201,7 @@
                         <div class="review-title">Great weighted blanket</div>
                         <div class="review-content">
                             <p>Bought 3 of the grey 15 lb weighted blankets. They came well packaged. They were thinner than expected but we all slept reasonably well being our legs felt weighted/heavy (followed instructions for those who never slept with a weighted blanket)...totally recommend following the instructions for adjusting to sleeping underneath the blanket.</p>
-                            <p>The other two blankets are very much enjoyed by other family members. The one family member has found that his restless legs may have improved. Also, he suffers from leg cramps quite often every week. Amazingly, this weighted blanket may help reduce his leg cramping, and he sleeps very well!</p>
+                            <p>The other two blankets are very much enjoyed by other family members. The one family member has found that his restless legs may have improved. Also, he suffers from leg cramps quite often every week. Many users report that this weighted blanket may help reduce leg cramping, and he sleeps very well!</p>
                         </div>
                         <div class="review-helpful">40 people found this helpful</div>
                     </div>
@@ -1113,11 +1282,11 @@
                 </div>
                 
                 <p style="text-align: center; margin-top: 40px; font-size: 17px;">
-                    <a href="https://www.amazon.com/YNM-Weighted-Blanket-Premium-Glass/dp/B07G8K94V7?crid=3TJWH7T7F52N0&dib=eyJ2IjoiMSJ9.Z2J1YjA5YWNlNjY0MWNmMTkzYjY3N2ZlZjg4OGY0YTlhZDlhYzAxMWY4NjlhNzljYjNlNTZhN2JmZTZjNTk1ZjU3OTVlZjZlOTJlMjlmYzBmOTU3YjM5NjIwYzJlZjA2YjUyOTJiYjZjYTlmMWJhYTcxZDdjZGI4YTdjNTNiMTkxYWRlNDJmYjNhOWZjZWZjNzY0YWY2YThhMzRmYTkxZmY4OTIwMTgzZDgzYTQwMjZjYTQ2OTZlZTU5ZjUyY2E1YTM2OTRlMTkzOGJlZGRiMWViZmM5YjNhZjNiNjc1MWJhYjU5ZjBkOTZjYjBkOWI0MGJjYjA3MTQ4YjU.N9eP8r0Y7H29VjHlD89H7Y7H7H7H7H7H7H7H7H7H7H7H7H7H7H&dib_tag=se&keywords=weighted%2Bblanket&qid=1779945566&sprefix=weighted%2Bblanket%2Caps%2C667&sr=8-3-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=zenbodywell20-20&linkId=5f3c1e588b0a5c4637e8d5c8e8d9a8d9&language=en_US&ref_=as_li_ss_tl" 
+                    <a href="https://www.amazon.com/YnM-Weighted-Blanket-Cotton-Material/dp/B073429DV2?crid=2I7DKCCH300H4&dib=eyJ2IjoiMSJ9.73RAXJkTnZfcajP3rVwzGsSoBYtTSjCWTkM3TaTs9oT5CLzgdqr6fCxf_buxa9PS_G7BVFKl4DPkcYa-B--3goZE3Ooq7iUSXoBaguov6LkQS9rzOhzteJJQTFH97467-OvLZIjZzqkqlJC_GD_Y-YkAuUMAL9pNUZBdriLYLldwPQUDRjo1Gg5Y-hIgQRigN8lyeQhsaQVM1sjLnl50ZNxV0rbKdOapaq_7lC-zFk9zkVZ6g9QHmNzhM8OuAlN7OHkT5HQECWHmDj7Hpeo9k_PHnm969PibyoGSnFcT8VI.LdpJurs8Ptj--ZqwnrbTRvHLvrt797T-MpNsJnQwb0A&dib_tag=se&keywords=Weighted%2BBlanket&qid=1779936320&sprefix=weighted%2Bblanket%2B%2Caps%2C629&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1&linkCode=ll2&tag=zenbodywell20-20&linkId=ac993594931de04ab8d990e1a415935c&language=en_US&ref_=as_li_ss_tl" 
                        target="_blank" 
                        rel="noopener noreferrer" 
                        style="color: #FF9900; font-weight: 600; text-decoration: none; border-bottom: 2px solid #FF9900; padding-bottom: 2px;">
-                        See 20,601+ verified customer reviews on Amazon →
+                        See 49,508+ verified customer reviews on Amazon →
                     </a>
                 </p>
             </div>
@@ -1151,16 +1320,16 @@
                 <h3 style="margin: 32px 0 20px; color: #1f2937;">Product Gallery</h3>
                 <div class="image-gallery">
                     <div class="gallery-item">
-                        <img src="./imgs/tanzi/61wqo9sOcAL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket detail view" loading="lazy">
+                        <img src="https://m.media-amazon.com/images/I/61wqo9sOcAL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket detail view" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="./imgs/tanzi/713K4Gn-gVL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket side view" loading="lazy">
+                        <img src="https://m.media-amazon.com/images/I/817RB8vvphL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket side view" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="./imgs/tanzi/81g9kvLOkbL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket fabric detail" loading="lazy">
+                        <img src="https://m.media-amazon.com/images/I/81g9kvLOkbL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket fabric detail" loading="lazy">
                     </div>
                     <div class="gallery-item">
-                        <img src="./imgs/tanzi/81eanT9KU-L._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket size chart" loading="lazy">
+                        <img src="https://m.media-amazon.com/images/I/81eanT9KU-L._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket size chart" loading="lazy">
                     </div>
                 </div>
                 
@@ -1240,9 +1409,6 @@
                 </a>
             </div>
 
-            <div style="background-color: #f9fafb; padding: 24px; border-radius: 12px; font-size: 14px; color: #6B7280; margin-top: 48px; line-height: 1.7; border: 1px solid #e5e7eb;">
-                <strong>Amazon Affiliate Disclosure:</strong> Healthy Living is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. When you click on our links and make a purchase on Amazon, we may earn a small commission at no extra cost to you.
-            </div>
             <div style="background-color: #fef3c7; padding: 20px; border-radius: 12px; font-size: 14px; color: #92400e; margin-top: 16px; line-height: 1.7; border: 1px solid #fcd34d;">
                 <strong>Medical Disclaimer:</strong> This product is not intended to diagnose, treat, cure, or prevent any disease. Always consult a healthcare professional for medical advice.
             </div>
@@ -1262,5 +1428,80 @@
             </p>
         </div>
     </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+        <p style="margin: 0; line-height: 1.6; font-size: 14px;">
+            🍪 We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
+        </p>
+        <div class="cookie-buttons">
+            <button id="acceptCookies" class="cookie-btn accept">Accept All</button>
+            <button id="declineCookies" class="cookie-btn decline">Decline</button>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Consent
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.getElementById('cookieBanner');
+            const acceptBtn = document.getElementById('acceptCookies');
+            const declineBtn = document.getElementById('declineCookies');
+
+            const consent = localStorage.getItem('cookieConsent');
+            if (!consent) {
+                setTimeout(() => {
+                    cookieBanner.classList.add('active');
+                }, 1000);
+            }
+
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.classList.remove('active');
+            });
+
+            declineBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'declined');
+                cookieBanner.classList.remove('active');
+            });
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const isOpen = answer.style.display === 'block';
+                
+                // Close all FAQs
+                document.querySelectorAll('.faq-answer').forEach(a => {
+                    a.style.display = 'none';
+                });
+                
+                // Toggle current FAQ
+                if (!isOpen) {
+                    answer.style.display = 'block';
+                }
+            });
+        });
+        
+        // Initialize first FAQ as open
+        const firstAnswer = document.querySelector('.faq-answer');
+        if (firstAnswer) {
+            firstAnswer.style.display = 'block';
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
