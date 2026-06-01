@@ -163,6 +163,7 @@
                         </div>
                     </div>
                     <p class="product-description">
+                        <strong>Tired of feeling stressed and overwhelmed?</strong><br>
                         Experience calming relaxation with Nexon Botanics Essential Oil. This premium essential oil creates a peaceful atmosphere, perfect for diffusers and aromatherapy.
                     </p>
                     <div class="btn-group">
@@ -249,13 +250,13 @@
             <!-- 5. Why We Recommend Section -->
             <div class="sleep-importance-section section">
                 <h2 class="section-title">Why We Recommend This Essential Oil</h2>
-                <p class="product-description" style="margin-bottom: 24px;">Our reviews focus on quality and value. A higher price doesn't always mean a better product.</p>
+                <p class="product-description" style="margin-bottom: 24px;">Our reviews prioritize quality and real value — price tags don't always reflect performance.</p>
                 
                 <p class="product-description" style="margin-bottom: 24px;"><strong>The Power of Aromatherapy</strong></p>
                 
                 <p class="product-description" style="margin-bottom: 24px;">Essential oils have been used for centuries for their therapeutic benefits. From promoting relaxation to boosting mood, these natural extracts offer a holistic approach to wellness that complements modern lifestyles.</p>
                 
-                <p class="product-description" style="margin-bottom: 24px;"><strong>The Four Biggest Advantages of Our Essential Oil:</strong></p>
+                <p class="product-description" style="margin-bottom: 24px;"><strong>Key Benefits of Our Essential Oil:</strong></p>
                 
                 <p class="product-description" style="margin-bottom: 24px;">✓ <strong>Comforting Aroma</strong> — Creates a fresh and pleasant ambiance that encourages relaxation and tranquility.</p>
                 
@@ -268,7 +269,7 @@
 
             <!-- 6. Core Benefits Section - 核心4大优势 -->
             <div class="sleep-importance-section section">
-                <h2 class="section-title">The Four Biggest Advantages of Nexon Botanics Essential Oil</h2>
+                <h2 class="section-title">Key Benefits of Nexon Botanics Essential Oil</h2>
                 <div class="advantages-grid">
                     <div class="advantage-card">
                         <div class="advantage-icon">🌿</div>
@@ -303,7 +304,7 @@
 
             <!-- 7. Product Materials & Technology Section - 材质与技术细节 -->
             <div class="sleep-importance-section section">
-                <h2 class="section-title">Product Materials & Technology</h2>
+                <h2 class="section-title">Materials & Technology</h2>
                 <div class="advantages-grid">
                     <div class="advantage-card">
                         <div class="advantage-icon">🌱</div>
@@ -432,7 +433,7 @@
             </div>
 
             <!-- 9. Testing Guide Section - 我们的实测数据 -->
-            <div class="testing-guide-section">
+            <div class="testing-guide-section section">
                 <h2 class="section-title">Our Exclusive Testing Process</h2>
                 <p class="testing-guide-intro">We purchase and test these oils ourselves to give you honest, unbiased recommendations.</p>
                 
@@ -465,37 +466,74 @@
             </div>
 
             <!-- Product Showcase -->
-            <div class="product-showcase">
-                <div class="showcase-container">
-                    <div class="showcase-main">
+            <div class="sleep-importance-section section">
+                <h2 class="section-title">Product Photos</h2>
+                <div class="showcase-grid">
+                    <div class="showcase-img-container">
                         <img src="https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL1500_.jpg"
-                             srcset="https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL300_.jpg 300w,
-                                     https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL600_.jpg 600w,
-                                     https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL1500_.jpg 800w"
-                             sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 800px"
                              alt="Nexon Botanics Essential Oil - 100% Pure Therapeutic Grade"
-                             class="showcase-main-img"
-                             id="showcaseMainImg"
-                             width="800"
-                             height="800"
-                             loading="lazy">
-                        <div class="showcase-dots">
-                            <span class="showcase-dot active" data-index="0"></span>
-                            <span class="showcase-dot" data-index="1"></span>
-                            <span class="showcase-dot" data-index="2"></span>
-                            <span class="showcase-dot" data-index="3"></span>
-                        </div>
+                             class="showcase-img">
+                    </div>
+                    <div class="showcase-img-container">
+                        <img src="https://m.media-amazon.com/images/I/71zVVQ--f7L._AC_SL1500_.jpg"
+                             alt="Nexon Botanics Essential Oil Set - Multiple Scents"
+                             class="showcase-img">
+                    </div>
+                    <div class="showcase-img-container">
+                        <img src="https://m.media-amazon.com/images/I/71WSd+I77RL._AC_SL1500_.jpg"
+                             alt="Nexon Botanics Essential Oil - Premium Quality"
+                             class="showcase-img">
+                    </div>
+                    <div class="showcase-img-container">
+                        <img src="https://m.media-amazon.com/images/I/71yB+2WGTwL._AC_SL1500_.jpg"
+                             alt="Nexon Botanics Essential Oil - Packaging"
+                             class="showcase-img">
                     </div>
                 </div>
+                <style>
+                    .showcase-grid {
+                        display: grid;
+                        grid-template-columns: repeat(4, 1fr);
+                        gap: 16px;
+                        margin-top: 24px;
+                    }
+                    .showcase-img-container {
+                        background: white;
+                        padding: 12px;
+                        border-radius: 16px;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+                    .showcase-img-container:hover {
+                        transform: translateY(-4px);
+                        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+                    }
+                    .showcase-img {
+                        width: 100%;
+                        height: 180px;
+                        object-fit: contain;
+                        border-radius: 8px;
+                    }
+                    @media (max-width: 900px) {
+                        .showcase-grid {
+                            grid-template-columns: repeat(2, 1fr);
+                        }
+                    }
+                    @media (max-width: 600px) {
+                        .showcase-grid {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                </style>
             </div>
 
             <!-- 10. FAQ Section - FAQ（解答常见问题）-->
-            <div id="faq" class="faq-section">
+            <div id="faq" class="faq-section section">
                 <h2 class="section-title">Frequently Asked Questions</h2>
                 <div class="faq-item active">
                     <div class="faq-question">
                         <span>Are these essential oils 100% pure?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Yes! All our essential oils are 100% pure and therapeutic grade. They are free from additives, fillers, and synthetic fragrances.
@@ -504,7 +542,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How many oils come in the set?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Our premium set includes 14 essential oils: lavender, tea tree, eucalyptus, peppermint, lemon, orange, frankincense, rosemary, chamomile, sandalwood, cedarwood, bergamot, ylang-ylang, and patchouli.
@@ -513,7 +551,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Can I use these in a diffuser?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Absolutely! These oils are perfect for use in ultrasonic diffusers, nebulizers, and humidifiers. Simply add a few drops to water and enjoy the aromatic benefits.
@@ -522,7 +560,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Are these safe for skin use?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Yes, but always dilute with a carrier oil (like jojoba or coconut oil) before applying to skin. Never apply undiluted essential oils directly.
@@ -531,7 +569,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>How should I store essential oils?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Store in a cool, dark place away from direct sunlight and heat. Keep the bottles tightly closed when not in use to preserve the oils' potency.
@@ -540,7 +578,7 @@
                 <div class="faq-item">
                     <div class="faq-question">
                         <span>Do these oils expire?</span>
-                        <span class="faq-toggle">+</span>
+                        
                     </div>
                     <div class="faq-answer">
                         Essential oils do have a shelf life. Most oils last 1-3 years when stored properly. Citrus oils tend to have shorter shelf lives (6-12 months), while woody oils can last 3-5 years.
@@ -563,6 +601,11 @@
                     <span>✅</span>
                     <span>Free Returns & Prime Shipping</span>
                 </div>
+            </div>
+
+            <!-- Last Updated -->
+            <div class="disclaimer-box">
+                <strong>Last Updated:</strong> June 2026 | Product specifications and pricing are subject to change. Please verify details on Amazon before purchasing.
             </div>
         </div>
     </section>
@@ -601,29 +644,6 @@
                     if (!isActive) {
                         parent.classList.add('active');
                     }
-                });
-            });
-
-            const showcaseImages = [
-                'https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL1500_.jpg',
-                'https://m.media-amazon.com/images/I/71zVVQ--f7L._AC_SL1500_.jpg',
-                'https://m.media-amazon.com/images/I/71WSd+I77RL._AC_SL1500_.jpg',
-                'https://m.media-amazon.com/images/I/71yB+2WGTwL._AC_SL1500_.jpg'
-            ];
-
-            const showcaseMainImg = document.getElementById('showcaseMainImg');
-            const showcaseDots = document.querySelectorAll('.showcase-dot');
-
-            function setActiveImage(index) {
-                showcaseMainImg.src = showcaseImages[index];
-                showcaseDots.forEach((dot, i) => {
-                    dot.classList.toggle('active', i === index);
-                });
-            }
-
-            showcaseDots.forEach(dot => {
-                dot.addEventListener('click', () => {
-                    setActiveImage(parseInt(dot.dataset.index));
                 });
             });
         });
