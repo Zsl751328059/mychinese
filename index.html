@@ -6,6 +6,34 @@
     <title>Healthy Living - Wellness & Healthy Home Essentials</title>
     <meta name="description" content="Transform your home into a wellness sanctuary. Sleep better, relax deeper, and live healthier with curated home essentials, aromatherapy, yoga gear, and smart storage solutions.">
     <meta name="keywords" content="weighted blanket, aromatherapy diffuser, yoga mat, health storage, sleep better, wellness home, home spa, massage gun, gua sha">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Healthy Living",
+        "description": "Transform your home into a wellness sanctuary. Sleep better, relax deeper, and live healthier with curated home essentials, aromatherapy, yoga gear, and smart storage solutions.",
+        "url": "https://www.healthyliving.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.healthyliving.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.healthyliving.com/"
+            }
+        ]
+    }
+    </script>
     <style>
       * {
     margin: 0;
@@ -23,33 +51,38 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
-/* 按钮：清新薄荷绿，不发灰 */
+/* 按钮：清新薄荷绿 */
 .btn {
     display: inline-block;
-    background-color: #34a873;
+    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
     color: #fff;
     padding: 12px 28px;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     cursor: pointer;
     font-size: 16px;
+    box-shadow: 0 4px 14px rgba(52,168,115,0.3);
 }
 .btn:hover {
-    background-color: #1e7d54;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(52, 168, 115, 0.25);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(52,168,115,0.4);
+}
+.btn:active {
+    transform: translateY(-1px);
 }
 .btn-secondary {
-    background-color: transparent;
+    background: transparent;
     color: #34a873;
-    border: 1px solid #34a873;
+    border: 2px solid #34a873;
+    box-shadow: none;
 }
 .btn-secondary:hover {
-    background-color: #34a873;
+    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
     color: #fff;
+    box-shadow: 0 4px 14px rgba(52,168,115,0.3);
 }
 .view-more-container {
     text-align: center;
@@ -71,7 +104,7 @@ body {
 .logo {
     font-size: 26px;
     font-weight: 600;
-    color: #1f2937;
+    color: #059669;
     text-decoration: none;
     letter-spacing: 0.5px;
 }
@@ -312,71 +345,82 @@ body {
     text-align: center;
     font-size: 38px;
     margin-bottom: 50px;
-    color: #1f2937;
+    color: #059669;
     font-weight: 500;
 }
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 24px;
     max-width: 1600px;
     margin: 0 auto;
 }
 .product-card {
     background-color: #fff;
-    border: 1px solid #eeeeee;
-    border-radius: 10px;
-    padding: 22px;
-    padding-bottom: 75px;
+    border: 1px solid #f0f0f0;
+    border-radius: 16px;
+    padding: 24px;
+    padding-bottom: 80px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
-    min-height: 510px;
+    min-height: 520px;
+    overflow: hidden;
 }
 .product-card:hover {
-    box-shadow: 0 8px 22px rgba(0,0,0,0.07);
-    transform: translateY(-4px);
-    border-color: #34a873;
+    box-shadow: 0 12px 32px rgba(52,168,115,0.12);
+    transform: translateY(-6px);
+    border-color: rgba(52,168,115,0.3);
 }
 .product-card img {
-    max-width: 100%;
-    height: 210px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 18px;
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+    transition: transform 0.35s ease;
+}
+.product-card:hover img {
+    transform: scale(1.03);
 }
 .product-card h3 {
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 12px;
     color: #333;
     min-height: 48px;
     font-weight: 500;
+    line-height: 1.4;
 }
 
 .description {
     margin-bottom: 18px;
-    color: #666;
+    color: #6b7280;
     font-size: 14px;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 .product-card .btn {
     position: absolute;
-    bottom: 22px;
+    bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 44px);
-    padding: 10px 0;
+    width: calc(100% - 48px);
+    padding: 12px 0;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
 }
 .product-badge {
     position: absolute;
-    top: 14px;
-    right: 14px;
-    background-color: #34a873;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
     color: white;
-    padding: 5px 11px;
-    border-radius: 18px;
+    padding: 6px 14px;
+    border-radius: 20px;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(52,168,115,0.3);
 }
 .blog {
     padding: 80px 0;
@@ -442,6 +486,50 @@ body {
 .read-more:hover {
     color: #047857;
     text-decoration: underline;
+}
+.trust-section {
+    padding: 50px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+}
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.trust-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 20px 24px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+.trust-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(5,150,105,0.1);
+    border-color: rgba(5,150,105,0.2);
+}
+.trust-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 18px;
+}
+.trust-text {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
 }
 .features-section {
     padding: 60px 0;
@@ -525,6 +613,24 @@ body {
     .hero-image {
         order: -1;
     }
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .trust-item {
+        padding: 12px 15px;
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .trust-icon {
+        font-size: 18px;
+    }
+    .trust-text {
+        font-size: 12px;
+    }
     .section-title {
         font-size: 32px;
     }
@@ -532,23 +638,40 @@ body {
         display: none;
     }
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    .product-card {
+        padding: 15px;
+        min-height: auto;
+    }
+    .product-card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+    .product-card h3 {
+        font-size: 16px;
+        min-height: 40px;
+    }
+    .description {
+        font-size: 13px;
+        line-height: 1.5;
+        margin-bottom: 50px;
+    }
+    .product-card .btn {
+        padding: 8px 0;
+        font-size: 14px;
+        bottom: 15px;
+    }
+    .product-badge {
+        font-size: 11px;
+        padding: 4px 8px;
     }
     .blog-grid {
         grid-template-columns: 1fr;
     }
     .category-grid {
         grid-template-columns: 1fr;
-    }
-}
-@media (max-width: 1200px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-@media (max-width: 900px) {
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 }
     </style>
@@ -568,15 +691,36 @@ body {
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Transform Your Home Into a Wellness Sanctuary</h1>
-                <div class="hero-tagline">Better Sleep · Deep Relaxation · Healthy Living</div>
-                <div class="hero-subtagline">Curated Essentials for Your Well-Being</div>
-                <p>Create your own home spa experience. Discover the best relaxation aids, relaxation tools, yoga gear, and smart storage solutions that make healthy living effortless and beautiful.</p>
-                <a href="#products" class="btn">Shop Our Top Recommendations</a>
+                <h1>🌿 Healthy Living, Happier You</h1>
+                <div class="hero-tagline">Science-Backed Wellness Products for Deep Sleep & Stress Relief</div>
+                <div class="hero-subtagline">Trusted by Thousands | Live a Healthier Lifestyle</div>
+                <p>Discover personally tested sleep essentials and wellness products that help you unwind faster, reduce stress, and wake up feeling refreshed. Whether you struggle with anxiety, neck pain, or need better quality rest, our curated selection supports your journey to healthier living and mind-body wellness.</p>
+                <a href="#products" class="btn">Explore Healthy Living Essentials →</a>
             </div>
-            <!-- 替换为女性舒展、伸懒腰、居家放松风格图片 -->
-            <div class="hero-image">
-                <!-- <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68723?w=520&h=420&fit=crop" alt="Woman stretching and relaxing at home"> -->
+            <!-- <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68723?w=520&h=420&fit=crop" alt="Woman relaxing comfortably in bed">
+            </div> -->
+        </div>
+    </section>
+    <section class="trust-section">
+        <div class="container">
+            <div class="trust-grid">
+                <div class="trust-item">
+                    <span class="trust-icon-wrapper">👨‍🔬</span>
+                    <span class="trust-text">Personally Tested by Our Team</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-wrapper">💬</span>
+                    <span class="trust-text">Real Customer Reviews</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-wrapper">🛒</span>
+                    <span class="trust-text">Amazon Verified Products</span>
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon-wrapper">🔐</span>
+                    <span class="trust-text">Secure Shopping Experience</span>
+                </div>
             </div>
         </div>
     </section>
@@ -635,64 +779,64 @@ body {
                 <div class="tabs-content">
                     <div class="tab-content active" id="sleep">
                         <div class="category-header">
-                            <h2 class="section-title">🌙 Sleep & Relaxation</h2>
-                            <p class="category-intro">Our top priority is helping you achieve restful sleep and deep relaxation. Explore our premium sleep essentials.</p>
+                            <h2 class="section-title">Healthy Living Essentials</h2>
+                            <p class="category-intro">Transform your daily routine with wellness products designed for better sleep, less stress, and healthier living. Discover natural wellness solutions that support mind-body balance.</p>
                         </div>
                         <div class="product-grid">
                             <div class="product-card featured">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="https://m.media-amazon.com/images/I/817RB8vvphL._AC_SL1500_.jpg" alt="YnM 15 lbs weighted blanket for better sleep">
                                 <h3>YnM Weighted Blanket (15 lbs)</h3>
-                                <p class="description">Breathable and calming 15 lbs weighted blanket for adults. Evenly distributed glass beads provide deep pressure stimulation for better sleep.</p>
+                                <p class="description">Deep pressure stimulation weighted blanket for anxiety relief and deeper sleep. Breathable and calming with evenly distributed glass beads.</p>
                                 <a href="product-weighted-blanket.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="https://m.media-amazon.com/images/I/71PY6stFQjL._AC_SL1500_.jpg" alt="MyHalos 3D blackout sleep mask for side sleepers">
                                 <h3>MyHalos 3D Blackout Sleep Mask</h3>
-                                <p class="description">Zero pressure memory foam eye mask for side sleepers. Award-winning relaxation aid with complete light blocking.</p>
+                                <p class="description">Zero pressure memory foam eye mask with complete light blocking for uninterrupted rest.</p>
                                 <a href="product-sleep-mask.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="https://m.media-amazon.com/images/I/61NnmIIKJQL._AC_SL1000_.jpg" alt="Coop Home Goods Original Crescent Adjustable Pillow for neck support">
                                 <h3>Coop Home Goods Crescent Pillow</h3>
-                                <p class="description">Ergonomic crescent-shaped adjustable memory foam pillow for neck & back support.</p>
+                                <p class="description">Ergonomic adjustable memory foam pillow for neck pain relief and spinal alignment.</p>
                                 <a href="product-pillow.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Smart Home</span>
                                 <img src="https://m.media-amazon.com/images/I/71FXkpypl6L._AC_SY879_.jpg" alt="DREO 6L Humidifier - Smart Warm & Cool Mist">
                                 <h3>DREO 6L Smart Humidifier</h3>
-                                <p class="description">Smart warm & cool mist humidifier with 60-hour runtime, Google/Alexa compatible, precision humidity control.</p>
+                                <p class="description">Smart humidifier for optimal bedroom humidity and better sleep quality with 60-hour runtime.</p>
                                 <a href="product-aromatherapy.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Popular</span>
                                 <img src="https://m.media-amazon.com/images/I/71z20jxb5QL._AC_SL1500_.jpg" alt="Cocorrína Premium Reed Diffuser Set">
                                 <h3>Cocorrína Premium Reed Diffuser Set</h3>
-                                <p class="description">Eucalyptus & Lavender scented reed diffuser with natural botanical oils.</p>
+                                <p class="description">Eucalyptus & Lavender reed diffuser for calming aromatherapy and stress relief.</p>
                                 <a href="product-aroma-diffuser.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Editor's Pick</span>
                                 <img src="https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL1500_.jpg" alt="Nexon Botanics Stress Relief Essential Oil">
                                 <h3>Nexon Botanics Essential Oil</h3>
-                                <p class="description">Stress relief essential oil blend for diffusers and aromatherapy.</p>
+                                <p class="description">Stress relief essential oil blend for diffusers and bedtime relaxation.</p>
                                 <a href="product-aromatherapy-oil.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 High-Fidelity</span>
                                 <img src="https://m.media-amazon.com/images/I/61ND0D7QJyL._AC_SL1500_.jpg" alt="Loop Experience 2 Ear Plugs">
                                 <h3>Loop Experience 2 Ear Plugs</h3>
-                                <p class="description">High-fidelity hearing protection for concerts and daily use.</p>
+                                <p class="description">High-fidelity ear plugs for noise reduction and peaceful sleep.</p>
                                 <a href="product-ear-plugs.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">🔥 43% Off</span>
+                                <span class="product-badge">🔥 Popular</span>
                                 <img src="https://m.media-amazon.com/images/I/71yoOvyYDBL._SL1500_.jpg" alt="BAIMEI Gua Sha & Jade Roller Set">
                                 <h3>BAIMEI Gua Sha & Jade Roller</h3>
-                                <p class="description">Cooling face roller & gua sha tool for depuffing, facial sculpting & relaxation.</p>
+                                <p class="description">Cooling gua sha tool for facial relaxation and self-care routine.</p>
                                 <a href="product-gua-sha.html" class="btn">View Details</a>
                             </div>
                         </div>
@@ -705,7 +849,7 @@ body {
                         </div>
                         <div class="product-grid">
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/anmo/51VQlFR4o+L._AC_SL1500_.jpg" alt="Opove M3 Pro 2 Massage Gun">
                                 <h3>Opove M3 Pro 2 Massage Gun</h3>
                                 <p class="price">Check Price</p>
@@ -713,7 +857,7 @@ body {
                                 <a href="product-massage-gun.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/jingzhuianmo/Sf740fca2cf144e22bf1b729e7e00d03cr.jpg" alt="Electric Neck Shoulder Pulse Massager">
                                 <h3>Electric Neck Shoulder Massager</h3>
                                 <p class="price">Check Price</p>
@@ -721,7 +865,7 @@ body {
                                 <a href="product-neck-massager.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/yujia/S325951993edf4a5e9a4eacf0b438f52cI.jpg" alt="Foldable Yoga Mat in Blue">
                                 <h3>Foldable Yoga Mat in Blue</h3>
                                 <p class="price">Check Price</p>
@@ -729,7 +873,7 @@ body {
                                 <a href="product-yoga-mat.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/shuzi/S25945eb574a049a9ae3387b43c0e53d4Z.jpg" alt="Natural Wood Grain Ox Horn Splicing Comb">
                                 <h3>Natural Wood Grain Ox Horn Comb</h3>
                                 <p class="price">Check Price</p>
@@ -737,7 +881,7 @@ body {
                                 <a href="product-horn-comb.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/fangshaiyi/Sd4676b00f72b43f3b588e29b16c127b2M.jpg" alt="Women Hooded Sun Protection Jacket">
                                 <h3>Women Sun Protection Jacket</h3>
                                 <p class="price">Check Price</p>
@@ -754,7 +898,7 @@ body {
                         </div>
                         <div class="product-grid">
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/shounahe/A0e1bc4ef66ad4be599c16f13e0ce295eu.jpg" alt="18Pack 27oz Glass Storage Containers">
                                 <h3>18Pack Glass Storage Containers</h3>
                                 <p class="price">Check Price</p>
@@ -762,7 +906,7 @@ body {
                                 <a href="product-storage-containers.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/tea/Sf465a219a17d42ccb02b9e9fe3f95f54H.jpg" alt="HMLOVE Glass Teapot With Stainless Steel Tea Strainer">
                                 <h3>HMLOVE Glass Teapot</h3>
                                 <p class="price">Check Price</p>
@@ -770,7 +914,7 @@ body {
                                 <a href="product-herbal-tea.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/shounaxiangzi/S1ca3be99389846f799b543b3a269e7a0g.jpg" alt="Multifunctional Multi-Layer Storage Box">
                                 <h3>Multifunctional Storage Box</h3>
                                 <p class="price">Check Price</p>
@@ -778,7 +922,7 @@ body {
                                 <a href="product-galaxy-lamp.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/shounaxiangzi2/S996711250bbb44c7943eac6007b3e4ddz.jpg" alt="Heavy Duty Closet Organizer Storage Bins">
                                 <h3>Heavy Duty Storage Bins</h3>
                                 <p class="price">Check Price</p>
@@ -795,7 +939,7 @@ body {
                         </div>
                         <div class="product-grid">
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/chongwusuliaodai/S6b5a01e5cd304ff491735ac48629998f5.jpg" alt="EPI Biodegradable Dog Poop Bags">
                                 <h3>EPI Biodegradable Dog Poop Bags</h3>
                                 <p class="price">Check Price</p>
@@ -803,7 +947,7 @@ body {
                                 <a href="product-pet-waste-bags.html" class="btn">View Details</a>
                             </div>
                             <div class="product-card">
-                                <span class="product-badge">⭐ Best Value</span>
+                                <span class="product-badge">Recommended</span>
                                 <img src="./imgs/chongwucesuo/S651514bfc0144449a54a5c0956a20baey.jpg" alt="Smart Cat Toilet Automatic Litter Box">
                                 <h3>Smart Cat Toilet Litter Box</h3>
                                 <p class="price">Check Price</p>
@@ -884,8 +1028,8 @@ body {
                     <div class="feature-text">Trusted Brands</div>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">⭐</div>
-                    <div class="feature-text">Top Rated</div>
+                    <div class="feature-icon">✅</div>
+                    <div class="feature-text">Quality Tested</div>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">💬</div>
@@ -898,7 +1042,8 @@ body {
         <div class="container">
             <p><a href="index.html" style="color: #fff; text-decoration: none; font-weight: 500;">Healthy Living</a></p>
             <p>&copy; 2026 Healthy Living. All rights reserved.</p>
-            <p class="disclaimer">This website contains affiliate links. We may earn a small commission if you purchase through these links, at no extra cost to you. This helps us continue to provide free wellness content. All information on this site is for educational purposes only.</p>
+            <p class="disclaimer">This website contains affiliate links. We may earn a small commission if you purchase through these links, at no extra cost to you. This helps us continue to provide free wellness content.</p>
+            <p class="disclaimer">**Medical Disclaimer:** All information on this site is for educational purposes only and is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.</p>
             <p style="font-size: 14px; margin-top: 15px;">
                 <a href="privacy-policy.html">Privacy Policy</a> | 
                 <a href="cookie-policy.html">Cookie Policy</a> | 
