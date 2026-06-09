@@ -49,20 +49,22 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #ffffff;
+    color: #ffffff;
+    background: linear-gradient(180deg, #0d1b2a 0%, #1a365d 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 .container {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 20px;
 }
-/* 按钮：清新薄荷绿 */
+/* 按钮：深色主题橙色 */
 .btn {
     display: inline-block;
-    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
+    background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
     color: #fff;
     padding: 12px 28px;
     text-decoration: none;
@@ -72,33 +74,34 @@ body {
     border: none;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: 0 4px 14px rgba(52,168,115,0.3);
+    box-shadow: 0 4px 14px rgba(255,125,0,0.3);
 }
 .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(52,168,115,0.4);
+    box-shadow: 0 8px 24px rgba(255,125,0,0.4);
 }
 .btn:active {
     transform: translateY(-1px);
 }
 .btn-secondary {
     background: transparent;
-    color: #34a873;
-    border: 2px solid #34a873;
+    color: #ff7d00;
+    border: 2px solid #ff7d00;
     box-shadow: none;
 }
 .btn-secondary:hover {
-    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
+    background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
     color: #fff;
-    box-shadow: 0 4px 14px rgba(52,168,115,0.3);
+    box-shadow: 0 4px 14px rgba(255,125,0,0.3);
 }
 .view-more-container {
     text-align: center;
     margin-top: 40px;
 }
 .navbar {
-    background-color: #fff;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    background-color: rgba(13, 27, 42, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 1px 6px rgba(0,0,0,0.2);
     padding: 18px 0;
     position: sticky;
     top: 0;
@@ -112,7 +115,7 @@ body {
 .logo {
     font-size: 26px;
     font-weight: 600;
-    color: #059669;
+    color: #ff7d00;
     text-decoration: none;
     letter-spacing: 0.5px;
 }
@@ -122,14 +125,14 @@ body {
     gap: 32px;
 }
 .nav-links a {
-    color: #444;
+    color: #cbd5e0;
     text-decoration: none;
     font-weight: 400;
     font-size: 16px;
     transition: color 0.3s ease;
 }
 .nav-links a:hover {
-    color: #34a873;
+    color: #ff7d00;
 }
 .hero {
     padding: 90px 0;
@@ -137,7 +140,7 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgba(249, 250, 249, 0.95);
+    background-color: rgba(13, 27, 42, 0.95);
     background-blend-mode: overlay;
 }
 .tabs-container {
@@ -150,24 +153,24 @@ body {
     margin-bottom: 40px;
     flex-wrap: wrap;
     padding: 20px;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    background: rgba(30, 58, 95, 0.5);
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
 }
 .tab-btn {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 14px 24px;
-    background: white;
+    background: rgba(26, 54, 93, 0.8);
     border: 2px solid transparent;
     border-radius: 16px;
     font-size: 15px;
     font-weight: 500;
-    color: #4B5563;
+    color: #cbd5e0;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     position: relative;
     overflow: hidden;
 }
@@ -185,21 +188,21 @@ body {
     left: 100%;
 }
 .tab-btn:hover {
-    border-color: #059669;
+    border-color: #ff7d00;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(5,150,105,0.15);
-    color: #059669;
+    box-shadow: 0 6px 20px rgba(255,125,0,0.2);
+    color: #ff7d00;
 }
 .tab-btn.active {
-    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
-    border-color: #059669;
+    background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+    border-color: #ff7d00;
     color: white;
-    box-shadow: 0 6px 24px rgba(5,150,105,0.3);
+    box-shadow: 0 6px 24px rgba(255,125,0,0.3);
     transform: translateY(-2px);
 }
 .tab-btn.active:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(5,150,105,0.4);
+    box-shadow: 0 10px 30px rgba(255,125,0,0.4);
 }
 .tab-icon {
     font-size: 18px;
@@ -242,7 +245,7 @@ body {
 }
 .category-intro {
     font-size: 16px;
-    color: #6B7280;
+    color: #cbd5e0;
     max-width: 600px;
     margin: 0 auto;
     line-height: 1.7;
@@ -272,39 +275,39 @@ body {
 .hero h1 {
     font-size: 46px;
     margin-bottom: 22px;
-    color: #1f2937;
+    color: #ffffff;
     line-height: 1.25;
     font-weight: 500;
 }
 .hero-tagline {
     font-size: 22px;
     margin-bottom: 14px;
-    color: #34a873;
+    color: #ff7d00;
     font-weight: 500;
     letter-spacing: 0.8px;
 }
 .hero-subtagline {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #666;
+    color: #cbd5e0;
     font-weight: 400;
 }
 .hero p {
     font-size: 17px;
     margin-bottom: 38px;
-    color: #555;
+    color: #e2e8f0;
     line-height: 1.8;
     max-width: 600px;
 }
 .categories {
     padding: 70px 0;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 .categories h2 {
     text-align: center;
     font-size: 30px;
     margin-bottom: 45px;
-    color: #1f2937;
+    color: #ffffff;
     font-weight: 500;
 }
 .category-grid {
@@ -315,25 +318,25 @@ body {
     margin: 0 auto;
 }
 .category-card {
-    background-color: #f9faf9;
-    color: #1f2937;
+    background-color: rgba(30, 58, 95, 0.6);
+    color: #ffffff;
     padding: 42px 30px;
-    border-radius: 10px;
+    border-radius: 16px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s ease;
     text-decoration: none;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .category-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-    background-color: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    background-color: rgba(44, 82, 130, 0.8);
 }
 .category-icon {
     font-size: 52px;
     margin-bottom: 20px;
-    color: #34a873;
+    color: #ff7d00;
 }
 .category-card h3 {
     font-size: 22px;
@@ -342,18 +345,18 @@ body {
 }
 .category-card p {
     font-size: 15px;
-    color: #666;
+    color: #cbd5e0;
     line-height: 1.6;
 }
 .products {
     padding: 80px 0;
-    background-color: #f9faf9;
+    background-color: transparent;
 }
 .section-title {
     text-align: center;
     font-size: 38px;
     margin-bottom: 50px;
-    color: #059669;
+    color: #ff7d00;
     font-weight: 500;
 }
 .product-grid {
@@ -364,8 +367,8 @@ body {
     margin: 0 auto;
 }
 .product-card {
-    background-color: #fff;
-    border: 1px solid #f0f0f0;
+    background-color: rgba(30, 58, 95, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     padding: 24px;
     padding-bottom: 80px;
@@ -383,11 +386,12 @@ body {
 .product-card img {
     width: 100%;
     height: 220px;
-    object-fit: contain;
+    object-fit: cover;
     border-radius: 12px;
     margin-bottom: 20px;
-    background-color: #f8f9fa;
+    background-color: rgba(13, 27, 42, 0.8);
     transition: transform 0.35s ease;
+    object-position: center center;
 }
 /* .product-card:hover img {
     transform: scale(1.03);
@@ -395,7 +399,7 @@ body {
 .product-card h3 {
     font-size: 18px;
     margin-bottom: 12px;
-    color: #333;
+    color: #ffffff;
     min-height: 48px;
     font-weight: 500;
     line-height: 1.4;
@@ -403,7 +407,7 @@ body {
 
 .description {
     margin-bottom: 18px;
-    color: #6b7280;
+    color: #cbd5e0;
     font-size: 14px;
     line-height: 1.6;
 }
@@ -422,17 +426,17 @@ body {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: linear-gradient(135deg, #34a873 0%, #1e7d54 100%);
+    background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
     color: white;
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 12px;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(52,168,115,0.3);
+    box-shadow: 0 2px 8px rgba(255,125,0,0.3);
 }
 .blog {
     padding: 80px 0;
-    background-color: #ffffff;
+    background-color: transparent;
 }
 .blog-grid {
     display: grid;
@@ -440,17 +444,17 @@ body {
     gap: 32px;
 }
 .blog-card {
-    background-color: #fff;
-    border-radius: 10px;
+    background-color: rgba(30, 58, 95, 0.6);
+    border-radius: 16px;
     overflow: hidden;
     transition: all 0.3s ease;
     position: relative;
     min-height: 410px;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .blog-card:hover {
-    /* box-shadow: 0 8px 22px rgba(0,0,0,0.07);
-    transform: translateY(-4px); */
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 .blog-card img {
     width: 100%;
@@ -468,20 +472,20 @@ body {
 .blog-card h3 {
     font-size: 19px;
     margin-bottom: 14px;
-    color: #333;
+    color: #ffffff;
     line-height: 1.35;
     min-height: 48px;
     font-weight: 500;
 }
 .blog-card p {
-    color: #666;
+    color: #cbd5e0;
     margin-bottom: 18px;
     flex-grow: 1;
     line-height: 1.6;
     font-size: 15px;
 }
 .read-more {
-    color: #059669;
+    color: #ff7d00;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
@@ -492,12 +496,12 @@ body {
     z-index: 1;
 }
 .read-more:hover {
-    color: #047857;
+    color: #ff9500;
     text-decoration: underline;
 }
 .trust-section {
     padding: 50px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    background: rgba(30, 58, 95, 0.4);
 }
 .trust-grid {
     display: grid;
@@ -512,16 +516,16 @@ body {
     justify-content: center;
     gap: 12px;
     padding: 20px 24px;
-    background-color: #fff;
+    background-color: rgba(30, 58, 95, 0.6);
     border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
-    border: 1px solid #f0f0f0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 .trust-item:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(5,150,105,0.1);
-    border-color: rgba(5,150,105,0.2);
+    box-shadow: 0 4px 16px rgba(255,125,0,0.2);
+    border-color: rgba(255,125,0,0.2);
 }
 .trust-icon-wrapper {
     display: flex;
@@ -529,21 +533,21 @@ body {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #059669 0%, #10B981 100%);
+    background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
     border-radius: 10px;
     color: #fff;
     font-size: 18px;
 }
 .trust-text {
     font-size: 14px;
-    color: #374151;
+    color: #cbd5e0;
     font-weight: 500;
 }
 .features-section {
     padding: 60px 0;
-    background-color: #f9faf9;
-    border-top: 1px solid #f0f0f0;
-    border-bottom: 1px solid #f0f0f0;
+    background-color: transparent;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .features-grid {
     display: grid;
@@ -556,27 +560,27 @@ body {
     text-align: center;
     padding: 20px;
     border-radius: 10px;
-    background-color: #fff;
-    border: 1px solid #f0f0f0;
+    background-color: rgba(30, 58, 95, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.3s ease;
 }
 .feature-item:hover {
     transform: translateY(-4px);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 .feature-icon {
     font-size: 34px;
     margin-bottom: 12px;
-    color: #34a873;
+    color: #ff7d00;
 }
 .feature-text {
     font-size: 14px;
     font-weight: 500;
-    color: #444;
+    color: #cbd5e0;
     letter-spacing: 0.4px;
 }
 .footer {
-    background-color: #1f2937;
+    background-color: rgba(13, 27, 42, 0.95);
     color: #fff;
     padding: 45px 0;
     text-align: center;
@@ -587,16 +591,16 @@ body {
     opacity: 0.9;
 }
 .footer a {
-    color: #c8d8cf;
+    color: #cbd5e0;
     text-decoration: none;
 }
 .footer a:hover {
-    color: #fff;
+    color: #ff7d00;
     text-decoration: underline;
 }
 .disclaimer {
     font-size: 13px;
-    color: #b8c7bf;
+    color: #a0aec0;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.55;
@@ -690,6 +694,10 @@ body {
             <a href="index.html" class="logo">Healthy Living</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
+                <li><a href="weighted-blankets.html">Weighted Blankets</a></li>
+                <li><a href="pillows.html">Pillows</a></li>
+                <li><a href="humidifiers.html">Humidifiers</a></li>
+                <li><a href="sleep-masks.html">Sleep Masks</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -803,9 +811,9 @@ body {
                                      height="400"
                                      loading="eager"
                                      fetchpriority="high">
-                                <h3>YnM Weighted Blanket (15 lbs)</h3>
+                                <h3>Weighted Blanket</h3>
                                 <p class="description">Deep pressure stimulation weighted blanket for anxiety relief and deeper sleep. Breathable and calming with evenly distributed glass beads.</p>
-                                <a href="product-weighted-blanket.html" class="btn">View Details</a>
+                                <a href="weighted-blankets.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -820,7 +828,7 @@ body {
                                      loading="lazy">
                                 <h3>MyHalos 3D Blackout Sleep Mask</h3>
                                 <p class="description">Zero pressure memory foam eye mask with complete light blocking for uninterrupted rest.</p>
-                                <a href="product-sleep-mask.html" class="btn">View Details</a>
+                                <a href="sleep-masks.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -835,7 +843,7 @@ body {
                                      loading="lazy">
                                 <h3>Coop Home Goods Crescent Pillow</h3>
                                 <p class="description">Ergonomic adjustable memory foam pillow for neck pain relief and spinal alignment.</p>
-                                <a href="product-pillow.html" class="btn">View Details</a>
+                                <a href="pillows.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Smart Home</span>
@@ -850,7 +858,7 @@ body {
                                      loading="lazy">
                                 <h3>DREO 6L Smart Humidifier</h3>
                                 <p class="description">Smart humidifier for optimal bedroom humidity and better sleep quality with 60-hour runtime.</p>
-                                <a href="product-aromatherapy.html" class="btn">View Details</a>
+                                <a href="humidifiers.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Popular</span>
@@ -865,7 +873,7 @@ body {
                                      loading="lazy">
                                 <h3>Cocorrína Premium Reed Diffuser Set</h3>
                                 <p class="description">Eucalyptus & Lavender reed diffuser for calming aromatherapy and stress relief.</p>
-                                <a href="product-aroma-diffuser.html" class="btn">View Details</a>
+                                <a href="product-aroma-diffuser.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Editor's Pick</span>
@@ -880,7 +888,7 @@ body {
                                      loading="lazy">
                                 <h3>Nexon Botanics Essential Oil</h3>
                                 <p class="description">Stress relief essential oil blend for diffusers and bedtime relaxation.</p>
-                                <a href="product-aromatherapy-oil.html" class="btn">View Details</a>
+                                <a href="product-aromatherapy-oil.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 High-Fidelity</span>
@@ -895,7 +903,7 @@ body {
                                      loading="lazy">
                                 <h3>Loop Experience 2 Ear Plugs</h3>
                                 <p class="description">High-fidelity ear plugs for noise reduction and peaceful sleep.</p>
-                                <a href="product-ear-plugs.html" class="btn">View Details</a>
+                                <a href="product-ear-plugs.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Popular</span>
@@ -910,7 +918,7 @@ body {
                                      loading="lazy">
                                 <h3>BAIMEI Gua Sha & Jade Roller</h3>
                                 <p class="description">Cooling gua sha tool for facial relaxation and self-care routine.</p>
-                                <a href="product-gua-sha.html" class="btn">View Details</a>
+                                <a href="product-gua-sha.html" class="btn">Our Recommendation</a>
                             </div>
                         </div>
                     </div>
@@ -927,7 +935,7 @@ body {
                                 <h3>Opove M3 Pro 2 Massage Gun</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Deep tissue percussion massager with 70lbs stall force.</p>
-                                <a href="product-massage-gun.html" class="btn">View Details</a>
+                                <a href="product-massage-gun.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -935,7 +943,7 @@ body {
                                 <h3>Electric Neck Shoulder Massager</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">4 head pulse massage with heating and breathing light.</p>
-                                <a href="product-neck-massager.html" class="btn">View Details</a>
+                                <a href="product-neck-massager.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -943,7 +951,7 @@ body {
                                 <h3>Natural Wood Grain Ox Horn Comb</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Premium wood grain ox horn splicing comb with long handle.</p>
-                                <a href="product-horn-comb.html" class="btn">View Details</a>
+                                <a href="product-horn-comb.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -951,7 +959,7 @@ body {
                                 <h3>Women Sun Protection Jacket</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">UV-proof ice silk hooded sun protection shirt. UPF 50+ protection.</p>
-                                <a href="product-sun-protection.html" class="btn">View Details</a>
+                                <a href="product-sun-protection.html" class="btn">Our Recommendation</a>
                             </div>
                         </div>
                     </div>
@@ -968,7 +976,7 @@ body {
                                 <h3>18Pack Glass Storage Containers</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Glass meal prep food container sets with snap airtight lids for microwave, oven.</p>
-                                <a href="product-storage-containers.html" class="btn">View Details</a>
+                                <a href="product-storage-containers.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -976,7 +984,7 @@ body {
                                 <h3>HMLOVE Glass Teapot</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Heat resistant glass teapot with stainless steel tea strainer infuser.</p>
-                                <a href="product-herbal-tea.html" class="btn">View Details</a>
+                                <a href="product-herbal-tea.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -984,7 +992,7 @@ body {
                                 <h3>Multifunctional Storage Box</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Durable waterproof storage box with handle. Multi-layer design.</p>
-                                <a href="product-galaxy-lamp.html" class="btn">View Details</a>
+                                <a href="product-galaxy-lamp.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -992,7 +1000,7 @@ body {
                                 <h3>Heavy Duty Storage Bins</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Non woven foldable storage bins with faux leather handles.</p>
-                                <a href="product-closet-organizer.html" class="btn">View Details</a>
+                                <a href="product-closet-organizer.html" class="btn">Our Recommendation</a>
                             </div>
                         </div>
                     </div>
@@ -1009,7 +1017,7 @@ body {
                                 <h3>EPI Biodegradable Dog Poop Bags</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">Eco-friendly pet waste bags with dispenser. EPI certified biodegradable.</p>
-                                <a href="product-pet-waste-bags.html" class="btn">View Details</a>
+                                <a href="product-pet-waste-bags.html" class="btn">Our Recommendation</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">Recommended</span>
@@ -1017,7 +1025,7 @@ body {
                                 <h3>Smart Cat Toilet Litter Box</h3>
                                 <p class="price">Check Price</p>
                                 <p class="description">76L large space APP remote control automatic self cleaning litter box.</p>
-                                <a href="product-cat-litter-box.html" class="btn">View Details</a>
+                                <a href="product-cat-litter-box.html" class="btn">Our Recommendation</a>
                             </div>
                         </div>
                     </div>
