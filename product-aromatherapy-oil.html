@@ -114,15 +114,28 @@
     
 </head>
 <body>
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Healthy Living</a>
+            <a href="index.html" class="logo">🌿 Healthy Living</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="https://www.amazon.com/Stress-Essential-Blend-Relief-Anxiety/dp/B09BKG2Z5R?dib=eyJ2IjoiMSJ9.wC5yroPXZxGVo_v7TkPg9Kso5MBLl11rz7my3rvEaPCg7ik0wQGmlGzzJpG2Q_HHOZjBajvrnh5Xg2pgGp2BZaaP4YOgJcpRDwxHetpw7COnC2-t-3pzrwaCaPhS_DF7gMmNa5rxb9m2z4YfVn00-Ui-33FXNaJOLtQPRAmrpfHjwScvKWRk8df5rabd7l-sDGAyAXNVYPsStLhn4lgs0KyYiUv4S1ROlT2OpEsU57a_A6tHlP1TdHuzSObcyJ-hazGXV2JI8oknKVvdavPeYs0OXdU3RJrHG31ks3GX8Og.9F_gsAI2TCdrzVqPulBFqPKmnK-n06d9mm6edfzt8U4&dib_tag=se&keywords=Aromatherapy%2BEssential%2BOil%2BSupplement&qid=1779947668&rdc=1&sr=8-9&th=1&linkCode=ll2&tag=zenbodywell20-20&linkId=f697739e11588d743de6c34aba00bf47&language=en_US&ref_=as_li_ss_tl#customerReviews" target="_blank" rel="noopener noreferrer sponsored">Reviews</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="weighted-blankets.html">Weighted Blankets</a></li>
+                <li><a href="aromatherapy.html">Aromatherapy</a></li>
+                <li><a href="essential-oils.html">Essential Oils</a></li>
+                <li><a href="ear-plugs.html">Ear Plugs</a></li>
+                <li><a href="gua-sha.html">Gua Sha</a></li>
+                <li><a href="pillows.html">Pillows</a></li>
+                <li><a href="humidifiers.html">Humidifiers</a></li>
+                <li><a href="sleep-masks.html">Sleep Masks</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -558,7 +571,10 @@
     </footer>
 
     <script>
-        // FAQ Accordion functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;

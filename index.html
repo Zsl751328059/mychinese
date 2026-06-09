@@ -102,7 +102,7 @@ body {
     background-color: rgba(13, 27, 42, 0.95);
     backdrop-filter: blur(10px);
     box-shadow: 0 1px 6px rgba(0,0,0,0.2);
-    padding: 18px 0;
+    padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -113,8 +113,8 @@ body {
     align-items: center;
 }
 .logo {
-    font-size: 26px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #ff7d00;
     text-decoration: none;
     letter-spacing: 0.5px;
@@ -122,17 +122,83 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 32px;
+    gap: 20px;
 }
 .nav-links a {
     color: #cbd5e0;
     text-decoration: none;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: 500;
+    font-size: 13px;
     transition: color 0.3s ease;
 }
 .nav-links a:hover {
     color: #ff7d00;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+.menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background: #cbd5e0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 12px;
+    }
+    .logo {
+        font-size: 18px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(13, 27, 42, 0.98);
+        flex-direction: column;
+        padding: 20px;
+        gap: 16px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 15px;
+        border-radius: 8px;
+    }
+    .nav-links a:hover {
+        background: rgba(255,125,0,0.1);
+    }
+    .menu-toggle {
+        display: flex;
+    }
+    .logo {
+        font-size: 18px;
+    }
+}
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px 0;
+    }
+    .logo {
+        font-size: 16px;
+    }
 }
 .hero {
     padding: 90px 0;
@@ -689,12 +755,16 @@ body {
     </style>
 </head>
 <body>
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Healthy Living</a>
+            <a href="index.html" class="logo">🌿 Healthy Living</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="weighted-blankets.html">Weighted Blankets</a></li>
+                <li><a href="aromatherapy.html">Aromatherapy</a></li>
+                <li><a href="essential-oils.html">Essential Oils</a></li>
+                <li><a href="ear-plugs.html">Ear Plugs</a></li>
+                <li><a href="gua-sha.html">Gua Sha</a></li>
                 <li><a href="pillows.html">Pillows</a></li>
                 <li><a href="humidifiers.html">Humidifiers</a></li>
                 <li><a href="sleep-masks.html">Sleep Masks</a></li>
@@ -702,6 +772,11 @@ body {
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
     <section class="hero">
@@ -873,7 +948,7 @@ body {
                                      loading="lazy">
                                 <h3>Cocorrína Premium Reed Diffuser Set</h3>
                                 <p class="description">Eucalyptus & Lavender reed diffuser for calming aromatherapy and stress relief.</p>
-                                <a href="product-aroma-diffuser.html" class="btn">Our Recommendation</a>
+                                <a href="aromatherapy.html" class="btn">View All Aromatherapy</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Editor's Pick</span>
@@ -888,7 +963,7 @@ body {
                                      loading="lazy">
                                 <h3>Nexon Botanics Essential Oil</h3>
                                 <p class="description">Stress relief essential oil blend for diffusers and bedtime relaxation.</p>
-                                <a href="product-aromatherapy-oil.html" class="btn">Our Recommendation</a>
+                                <a href="essential-oils.html" class="btn">View All Essential Oils</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 High-Fidelity</span>
@@ -903,7 +978,7 @@ body {
                                      loading="lazy">
                                 <h3>Loop Experience 2 Ear Plugs</h3>
                                 <p class="description">High-fidelity ear plugs for noise reduction and peaceful sleep.</p>
-                                <a href="product-ear-plugs.html" class="btn">Our Recommendation</a>
+                                <a href="ear-plugs.html" class="btn">View All Ear Plugs</a>
                             </div>
                             <div class="product-card">
                                 <span class="product-badge">🔥 Popular</span>
@@ -918,7 +993,7 @@ body {
                                      loading="lazy">
                                 <h3>BAIMEI Gua Sha & Jade Roller</h3>
                                 <p class="description">Cooling gua sha tool for facial relaxation and self-care routine.</p>
-                                <a href="product-gua-sha.html" class="btn">Our Recommendation</a>
+                                <a href="gua-sha.html" class="btn">View All Gua Sha</a>
                             </div>
                         </div>
                     </div>
@@ -1140,6 +1215,13 @@ body {
                 button.classList.add('active');
                 document.getElementById(tabId).classList.add('active');
             });
+        });
+
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>

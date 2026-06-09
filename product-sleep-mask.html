@@ -136,17 +136,28 @@
     
 </head>
 <body>
-    <nav class="navbar">
+        <nav class="navbar">
         <div class="container">
-            <a href="index.html" class="logo">Healthy Living</a>
+            <a href="index.html" class="logo">🌿 Healthy Living</a>
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="weighted-blankets.html">Weighted Blankets</a></li>
+                <li><a href="aromatherapy.html">Aromatherapy</a></li>
+                <li><a href="essential-oils.html">Essential Oils</a></li>
+                <li><a href="ear-plugs.html">Ear Plugs</a></li>
+                <li><a href="gua-sha.html">Gua Sha</a></li>
                 <li><a href="pillows.html">Pillows</a></li>
                 <li><a href="humidifiers.html">Humidifiers</a></li>
                 <li><a href="sleep-masks.html">Sleep Masks</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
@@ -638,7 +649,10 @@
     </footer>
 
     <script>
-        // FAQ Accordion functionality
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        
         document.querySelectorAll('.faq-question').forEach(question => {
             question.addEventListener('click', () => {
                 const faqItem = question.parentElement;
