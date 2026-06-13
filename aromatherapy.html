@@ -162,7 +162,47 @@
             </div>
         </section>
 
-                <section class="faq-section">
+        <section class="uses-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Essential Oil Uses</h2>
+                </div>
+                <div class="uses-grid">
+                    <div class="use-card">
+                        <div class="use-icon">🌙</div>
+                        <h3>Lavender</h3>
+                        <p>Promotes relaxation, improves sleep, reduces anxiety</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="use-icon">🌿</div>
+                        <h3>Tea Tree</h3>
+                        <p>Natural antiseptic, supports healthy skin, clears airways</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="use-icon">💨</div>
+                        <h3>Eucalyptus</h3>
+                        <p>Clears congestion, energizes, purifies air</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="use-icon">🌞</div>
+                        <h3>Peppermint</h3>
+                        <p>Boosts energy, improves focus, relieves headaches</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="use-icon">🍊</div>
+                        <h3>Lemon</h3>
+                        <p>Uplifts mood, cleanses air, supports immunity</p>
+                    </div>
+                    <div class="use-card">
+                        <div class="use-icon">🌸</div>
+                        <h3>Chamomile</h3>
+                        <p>Calming, reduces stress, soothes irritation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
             <div class="container">
                 <div class="section-header">
                     <h2>FAQs About Aromatherapy</h2>
@@ -231,6 +271,14 @@
     <script>
         document.querySelector('.menu-toggle').addEventListener('click', function() {
             document.querySelector('.nav').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', function() {
+                this.classList.toggle('active');
+                const answer = this.nextElementSibling;
+                answer.classList.toggle('active');
+            });
         });
     </script>
 </body>

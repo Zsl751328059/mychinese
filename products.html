@@ -1,0 +1,1768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wellness Products - Healthy Living | Premium Sleep & Relaxation Essentials</title>
+    <meta name="description" content="Discover our curated selection of premium wellness products. From weighted blankets to essential oils, find everything you need for better sleep, relaxation, and overall well-being.">
+    <meta name="robots" content="index, follow">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { 
+            --primary: #ff7d00; 
+            --primary-dark: #e67000;
+            --primary-light: #ffa726;
+            --bg-dark: #0a1628;
+            --bg-card: rgba(24, 42, 69, 0.8);
+            --border: rgba(255, 125, 0, 0.2);
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --text-muted: #718096;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #0a1628 0%, #1a365d 50%, #0a1628 100%); color: #fff; line-height: 1.6; min-height: 100vh; }
+        .container { max-width: 1600px; margin: 0 auto; padding: 0 24px; }
+        
+        header {
+            background: rgba(10, 22, 40, 0.95);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 125, 0, 0.15);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header-content { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo h4 { font-size: 24px; font-weight: 900; color: #ff7d00; letter-spacing: -0.5px; }
+        .logo-icon { font-size: 28px; }
+        
+        .nav { display: none; }
+        @media (min-width: 1024px) {
+            .nav { display: block; }
+            .nav-list { display: flex; gap: 40px; list-style: none; }
+            .nav-list a { 
+                color: #cbd5e0; 
+                text-decoration: none; 
+                font-weight: 500; 
+                font-size: 15px;
+                transition: all 0.3s; 
+                position: relative;
+                padding: 8px 0;
+            }
+            .nav-list a:hover, .nav-list a.active { color: #ff7d00; }
+            .nav-list a.active::after { 
+                content: ''; 
+                position: absolute; 
+                bottom: 0; 
+                left: 0; 
+                width: 100%; 
+                height: 3px; 
+                background: linear-gradient(90deg, #ff7d00 0%, #ff9500 100%); 
+                border-radius: 2px; 
+            }
+        }
+        
+        .menu-toggle { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 6px; 
+            background: none; 
+            border: none; 
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-toggle span { 
+            width: 32px; 
+            height: 2px; 
+            background: #cbd5e0;
+            transition: all 0.3s;
+        }
+        .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translateY(8px); }
+        .menu-toggle.active span:nth-child(2) { opacity: 0; }
+        .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translateY(-8px); }
+        @media (min-width: 1024px) { .menu-toggle { display: none; } }
+        
+        .nav.active {
+            display: block;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: rgba(10, 22, 40, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 125, 0, 0.15);
+            padding: 20px;
+        }
+        
+        .nav.active .nav-list {
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero-section {
+            padding: 80px 0 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -25%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 125, 0, 0.1) 0%, transparent 70%);
+        }
+        
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -20%;
+            width: 80%;
+            height: 80%;
+            background: radial-gradient(circle, rgba(255, 149, 0, 0.08) 0%, transparent 60%);
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: rgba(255, 125, 0, 0.15);
+            border: 1px solid rgba(255, 125, 0, 0.3);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #ff7d00;
+            margin-bottom: 24px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .hero-title {
+            font-size: 56px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 30%, #ffb74d 60%, #ffcc80 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+            animation: fadeInUp 0.8s ease-out;
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hero-subtitle {
+            font-size: 20px;
+            color: #a0aec0;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+        
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 32px;
+            background: rgba(24, 42, 69, 0.6);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 125, 0, 0.15);
+            backdrop-filter: blur(10px);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #ff7d00;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 13px;
+            color: #a0aec0;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .categories-section {
+            padding: 40px 0 60px;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+        
+        .section-description {
+            font-size: 17px;
+            color: #a0aec0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tabs-container {
+            width: 100%;
+        }
+        
+        .tabs-nav {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 50px;
+            overflow-x: auto;
+            padding: 10px 0;
+            scrollbar-width: none;
+        }
+        
+        .tabs-nav::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .tab {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 28px;
+            background: rgba(24, 42, 69, 0.7);
+            border: 2px solid rgba(255, 125, 0, 0.15);
+            border-radius: 20px;
+            font-size: 15px;
+            font-weight: 600;
+            color: #cbd5e0;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        
+        .tab-icon {
+            font-size: 18px;
+            color: #ff7d00;
+        }
+        
+        .tab::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,125,0,0.15), transparent);
+            transition: left 0.6s;
+        }
+        
+        .tab:hover::before {
+            left: 100%;
+        }
+        
+        .tab:hover { 
+            border-color: rgba(255, 125, 0, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(255,125,0,0.15);
+            color: #ff7d00;
+        }
+        
+        .tab.active { 
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+            border-color: #ff7d00;
+            color: white;
+            box-shadow: 0 10px 40px rgba(255,125,0,0.4);
+            transform: translateY(-4px);
+        }
+        
+        .tab.active .tab-icon {
+            color: white;
+        }
+        
+        .tab.active:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 50px rgba(255,125,0,0.5);
+        }
+
+        .tab-content { 
+            display: none; 
+            animation: fadeIn 0.5s ease-out;
+        }
+        
+        .tab-content.active { display: block; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .btn {
+            padding: 16px 28px;
+            border-radius: 14px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+            color: #fff;
+            box-shadow: 0 8px 25px rgba(255, 125, 0, 0.4);
+        }
+        
+        .btn-primary:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 12px 35px rgba(255, 125, 0, 0.5); 
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #ff7d00;
+            border: 2px solid #ff7d00;
+        }
+        
+        .btn-secondary:hover { 
+            background: rgba(255, 125, 0, 0.1); 
+            transform: translateY(-3px);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .product-card {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 32px;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(30, 58, 95, 0.9) 0%, rgba(26, 54, 93, 0.95) 100%);
+            border: 1px solid rgba(255, 125, 0, 0.2);
+            border-radius: 24px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255, 125, 0, 0.15) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .product-card:hover::before {
+            opacity: 1;
+        }
+        
+        .product-card:hover { 
+            transform: translateY(-8px); 
+            border-color: rgba(255, 125, 0, 0.4);
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.45);
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 8px 18px;
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+            color: #fff;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 700;
+            z-index: 2;
+            box-shadow: 0 4px 15px rgba(255, 125, 0, 0.4);
+        }
+        
+        @media (max-width: 900px) {
+            .product-card {
+                grid-template-columns: 1fr;
+                padding: 20px;
+                text-align: center;
+            }
+        }
+        
+        .product-badge.special {
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
+        }
+        
+        .product-image-container {
+            position: relative;
+            width: 100%;
+            height: 240px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: rgba(255, 125, 0, 0.05);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        }
+        
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .product-card:hover .product-image-container img { 
+            transform: scale(1.05); 
+        }
+        
+        .product-image-glow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120%;
+            height: 120%;
+            background: radial-gradient(circle, rgba(255, 125, 0, 0.25) 0%, transparent 70%);
+            border-radius: 20px;
+            animation: pulse-glow 3s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.5; transform: translate(-50%, -50%) scale(1.05); }
+        }
+        
+        .product-info { 
+            position: relative;
+            z-index: 1;
+            text-align: left;
+        }
+        
+        .product-card h3 { 
+            font-size: 24px; 
+            font-weight: 700; 
+            margin-bottom: 16px;
+            line-height: 1.3;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        
+        .product-card .description { 
+            font-size: 16px; 
+            color: #cbd5e0; 
+            line-height: 1.7;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            opacity: 0.9;
+        }
+        
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        
+        .product-rating .stars { gap: 3px; }
+        .product-rating .star { 
+            font-size: 18px; 
+            color: #ffd700; 
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+        }
+        .product-rating span { font-size: 14px; color: #a0aec0; }
+        
+        .product-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        
+        .highlight-tag {
+            display: inline-flex;
+            align-items: center;
+            padding: 6px 12px;
+            background: rgba(255, 125, 0, 0.1);
+            border: 1px solid rgba(255, 125, 0, 0.2);
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #fbd38d;
+            gap: 4px;
+        }
+        
+        .product-use-case {
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(255, 125, 0, 0.08);
+            border: 1px solid rgba(255, 125, 0, 0.2);
+            border-radius: 10px;
+            font-size: 12px;
+            font-weight: 600;
+            color: #ff7d00;
+            margin-bottom: 20px;
+        }
+        
+        .product-card .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 32px;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 14px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .product-card .btn.btn-primary {
+            background: linear-gradient(135deg, #ff7d00 0%, #ff9500 100%);
+            color: #fff;
+            border: none;
+            box-shadow: 0 4px 15px rgba(255, 125, 0, 0.4);
+        }
+        
+        .product-card .btn.btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 125, 0, 0.5);
+        }
+        
+        .product-card .btn.btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .product-card .btn.btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .comparison-strip {
+            background: linear-gradient(135deg, rgba(24, 42, 69, 0.85) 0%, rgba(26, 54, 93, 0.9) 100%);
+            border: 1px solid rgba(255, 125, 0, 0.15);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .comparison-strip h4 {
+            font-size: 20px;
+            font-weight: 800;
+            margin-bottom: 28px;
+            text-align: center;
+            color: #ffffff;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+        
+        .comparison-item {
+            text-align: center;
+            padding: 24px;
+            background: rgba(255, 125, 0, 0.05);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 125, 0, 0.12);
+            transition: all 0.3s;
+        }
+        
+        .comparison-item:hover {
+            background: rgba(255, 125, 0, 0.08);
+            border-color: rgba(255, 125, 0, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .comparison-item .icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            border-radius: 16px;
+            background: linear-gradient(135deg, rgba(255, 125, 0, 0.2) 0%, rgba(255, 149, 0, 0.1) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+        }
+        
+        .comparison-item .value {
+            font-size: 28px;
+            font-weight: 900;
+            color: #ff7d00;
+            margin-bottom: 6px;
+        }
+        
+        .comparison-item .label {
+            font-size: 14px;
+            color: #a0aec0;
+        }
+
+        .faq-section {
+            padding: 60px 0;
+            background: rgba(24, 42, 69, 0.4);
+            border-top: 1px solid rgba(255, 125, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 125, 0, 0.1);
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 125, 0, 0.1);
+        }
+        
+        .faq-question {
+            width: 100%;
+            padding: 24px 0;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffffff;
+            transition: color 0.3s;
+        }
+        
+        .faq-question:hover {
+            color: #ff7d00;
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            font-weight: 300;
+            color: #ff7d00;
+            transition: transform 0.3s;
+        }
+        
+        .faq-question.active::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+        
+        .faq-answer.active {
+            max-height: 200px;
+        }
+        
+        .faq-answer p {
+            padding: 0 0 24px;
+            color: #a0aec0;
+            line-height: 1.8;
+        }
+
+        footer { 
+            background: rgba(10, 22, 40, 0.95); 
+            padding: 60px 0 30px; 
+            border-top: 1px solid rgba(255, 125, 0, 0.15); 
+        }
+        
+        .footer-content { 
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-size: 18px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section p {
+            color: #a0aec0;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-section ul li a {
+            color: #a0aec0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        
+        .footer-section ul li a:hover {
+            color: #ff7d00;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 125, 0, 0.1);
+            color: #718096;
+            font-size: 13px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title { font-size: 36px; }
+            .hero-subtitle { font-size: 16px; }
+            .hero-stats { grid-template-columns: repeat(2, 1fr); padding: 20px; }
+            .stat-value { font-size: 28px; }
+            .hero-product { padding: 24px; }
+            .benefits { grid-template-columns: 1fr; }
+            .hero-cta { justify-content: center; }
+            .btn { padding: 14px 28px; font-size: 14px; }
+            .product-grid { grid-template-columns: 1fr; }
+            .comparison-grid { grid-template-columns: repeat(2, 1fr); }
+            .tab { padding: 12px 20px; font-size: 13px; }
+            .section-title { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon"></span>
+                    <h4>Healthy Living</h4>
+                </a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html" class="active">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="menu-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="hero-section">
+            <div class="container">
+                <span class="hero-badge">✓ Team Tested & Reviewed</span>
+                <h1 class="hero-title">Discover Premium Wellness Products</h1>
+                <p class="hero-subtitle">Explore our curated selection of sleep essentials, relaxation tools, and wellness products designed to enhance your well-being and improve your quality of life.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-value">2K+</div>
+                        <div class="stat-label">Happy Sleepers</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">4.8/5</div>
+                        <div class="stat-label">Reader Love</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">98%</div>
+                        <div class="stat-label">Recommend It</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">Free</div>
+                        <div class="stat-label">Shipping Over $50</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Shop by Category</h2>
+                    <p class="section-description">Find exactly what you need across our carefully curated product categories</p>
+                </div>
+
+                <div class="tabs-container">
+                    <div class="tabs-nav">
+                        <button class="tab active" data-tab="weighted-blankets">
+                            <span class="tab-icon"><i class="fas fa-thermometer-three-quarters"></i></span> Weighted Blankets
+                        </button>
+                        <button class="tab" data-tab="sleep-masks">
+                            <span class="tab-icon"><i class="fas fa-moon"></i></span> Sleep Masks
+                        </button>
+                        <button class="tab" data-tab="pillows">
+                            <span class="tab-icon"><i class="fas fa-square"></i></span> Pillows
+                        </button>
+                        <button class="tab" data-tab="humidifiers">
+                            <span class="tab-icon"><i class="fas fa-droplet"></i></span> Humidifiers
+                        </button>
+                        <button class="tab" data-tab="aromatherapy">
+                            <span class="tab-icon"><i class="fas fa-leaf"></i></span> Aromatherapy
+                        </button>
+                        <button class="tab" data-tab="essential-oils">
+                            <span class="tab-icon"><i class="fas fa-flask"></i></span> Essential Oils
+                        </button>
+                        <button class="tab" data-tab="ear-plugs">
+                            <span class="tab-icon"><i class="fas fa-headphones"></i></span> Ear Plugs
+                        </button>
+                        <button class="tab" data-tab="gua-sha">
+                            <span class="tab-icon"><i class="fas fa-star"></i></span> Gua Sha
+                        </button>
+                    </div>
+                </div>
+
+                <div id="weighted-blankets" class="tab-content active">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Best Seller</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/817RB8vvphL._AC_SL400_.jpg" alt="YnM Weighted Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>YnM Weighted Blanket</h3>
+                                <p class="description">Fall asleep faster and stay asleep longer with our top-rated weighted blanket. The 7-layer design provides gentle, even pressure that mimics a warm hug, helping to reduce anxiety and promote deep, restful sleep. Trusted by over 2,400+ happy customers!</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag">7-Layer Design</span>
+                                    <span class="highlight-tag">Cooling Fabric</span>
+                                    <span class="highlight-tag">Even Weight</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 2,456</span>
+                                </div>
+                                <a href="product-weighted-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Overall</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Budget Friendly</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/51hKc7sJx6L._AC_SL400_.jpg" alt="YnM Cooling Weighted Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>YnM Cooling Weighted Blanket</h3>
+                                <p class="description">Beat the heat and sleep cool all night long! Our bamboo rayon weighted blanket features breathable fabric that wicks away moisture, keeping you comfortable even on the hottest nights. Ideal for hot sleepers who refuse to compromise on deep sleep quality.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Bamboo Rayon</span>
+                                    <span class="highlight-tag"> Glass Beads</span>
+                                    <span class="highlight-tag"> Temp Control</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.7 | 1,523</span>
+                                </div>
+                                <a href="product-ynm-cooling-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Hot Sleepers</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Kids</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61FQydGu4iL._AC_SL400_.jpg" alt="Huloo Sleep Kids Weighted Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Huloo Sleep Kids Weighted Blanket</h3>
+                                <p class="description">Help your child sleep like an angel with our kid-friendly weighted blanket. The ultra-soft minky fabric is gentle on sensitive skin, while the calming pressure helps ease anxiety and promote healthy sleep habits. Loved by over 890+ parents!</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Kid-Friendly</span>
+                                    <span class="highlight-tag"> Minky Soft</span>
+                                    <span class="highlight-tag"> Colorful</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.6 | 890</span>
+                                </div>
+                                <a href="product-huloo-kids-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Kids</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Travel</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61JRmN6vxNL._AC_SL400_.jpg" alt="ZonLi Weighted Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>ZonLi Weighted Blanket</h3>
+                                <p class="description">Take your comfort on the go! This portable weighted blanket is perfect for travel, camping, or cozy afternoon naps. Lightweight yet effective, it delivers the same calming pressure wherever your adventures take you.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Travel Ready</span>
+                                    <span class="highlight-tag"> Portable</span>
+                                    <span class="highlight-tag"> Outdoor</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 1,215</span>
+                                </div>
+                                <a href="product-zonli-weighted-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Travel</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Office</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/716rtGvxySL._AC_SL400_.jpg" alt="Wemore Lap Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Wemore Lap Blanket</h3>
+                                <p class="description">Boost your focus and reduce stress at work! This compact weighted lap blanket creates a calming workspace environment, helping you stay productive and centered throughout your busy day. Perfect for office workers and remote professionals.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Office Use</span>
+                                    <span class="highlight-tag"> Compact</span>
+                                    <span class="highlight-tag"> Focus Boost</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 678</span>
+                                </div>
+                                <a href="product-wemore-lap-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Office</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Couple Size</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71NZMWfF7mL._AC_SL400_.jpg" alt="yescool King Size Weighted Blanket" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>yescool King Size</h3>
+                                <p class="description">Share the comfort, share the sleep! Our King size weighted blanket is designed for couples who want to experience the calming benefits together. No more fighting over blankets - now you can both enjoy deep, restful sleep.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Couple Size</span>
+                                    <span class="highlight-tag"> King Size</span>
+                                    <span class="highlight-tag"> Shared Comfort</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.6 | 987</span>
+                                </div>
+                                <a href="product-yescool-couple-blanket.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Couples</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="sleep-masks" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Best Seller</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61dIHCuq1pL._AC_SL400_.jpg" alt="YFONG Weighted Sleep Mask" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>YFONG Weighted Sleep Mask</h3>
+                                <p class="description">Sleep anywhere, anytime! Our weighted sleep mask provides gentle pressure that soothes your eyes and mind, blocking out 100% of light for instant relaxation. The deep eye cups won't smudge your makeup or press on your eyes.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Weighted 4.2oz</span>
+                                    <span class="highlight-tag"> Pressure Relief</span>
+                                    <span class="highlight-tag"> Deep Eye Cups</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 9,456</span>
+                                </div>
+                                <a href="product-yfong-sleep-mask.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Migraines</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Kids</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71IcZgYmAyL._AC_SL400_.jpg" alt="Ringolemona Kids Sleep Mask" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Ringolemona Kids Sleep Mask</h3>
+                                <p class="description">Help your teen sleep better! Our ultra-lightweight kids sleep mask is specially designed for growing eyes, providing 100% light blocking without any pressure. Perfect for sleepovers, travel, or just getting the rest they need.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Ages 8-18</span>
+                                    <span class="highlight-tag"> Ultra Light</span>
+                                    <span class="highlight-tag"> Memory Foam</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.7 | 4,567</span>
+                                </div>
+                                <a href="product-ringolemona-kids-mask.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Teens</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Best Overall</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71PY6stFQjL._AC_SL400_.jpg" alt="MyHalos 3D Blackout Sleep Mask" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>MyHalos 3D Blackout Sleep Mask</h3>
+                                <p class="description">Finally, a sleep mask that works for side sleepers! The 16mm deep eye cups eliminate pressure on your eyes while blocking every last ray of light. Over 18,900 satisfied customers can't be wrong!</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> 100% Blackout</span>
+                                    <span class="highlight-tag"> Zero Pressure</span>
+                                    <span class="highlight-tag"> Side Sleeper</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 18,901</span>
+                                </div>
+                                <a href="product-sleep-mask.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Side Sleepers</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="pillows" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Best Seller</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/714COr20AQL._AC_SL400_.jpg" alt="Cozyplayer Cooling Pillow" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Cozyplayer Cooling Pillow</h3>
+                                <p class="description">Say goodbye to neck pain and hot sleep! Our cooling pillow features Q-Max 0.4 technology that instantly lowers surface temperature, while the adjustable design ensures perfect spinal alignment for any sleeping position.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Q-Max 0.4</span>
+                                    <span class="highlight-tag"> Ergonomic</span>
+                                    <span class="highlight-tag"> Adjustable</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.6 | 8,234</span>
+                                </div>
+                                <a href="product-cozyplayer-pillow.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Back Pain</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Premium</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71rTYUIoQ3L._AC_SL400_.jpg" alt="Tempur-Pedic Pillow" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Tempur-Pedic TEMPUR-Ergo Neck Pillow</h3>
+                                <p class="description">Experience legendary comfort from the original memory foam brand! TEMPUR-Material precisely adapts to your head and neck, providing personalized support that relieves pressure points and helps you wake up feeling refreshed.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Orthopedic</span>
+                                    <span class="highlight-tag"> TEMPUR Material</span>
+                                    <span class="highlight-tag"> Neck Support</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.7 | 15,678</span>
+                                </div>
+                                <a href="product-tempur-pillow.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Neck Pain</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Wirecutter Pick</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61NnmIIKJQL._AC_SL400_.jpg" alt="Coop Home Goods Crescent Pillow" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Coop Home Goods Crescent Pillow</h3>
+                                <p class="description">The Wirecutter's top pick for a reason! Our crescent pillow features fully adjustable fill so you can customize the perfect support level. CertiPUR-US and GREENGUARD Gold certified for your peace of mind.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Crescent Shape</span>
+                                    <span class="highlight-tag"> CertiPUR-US</span>
+                                    <span class="highlight-tag"> Eco-Friendly</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 32,123</span>
+                                </div>
+                                <a href="product-pillow.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Adjustable</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="humidifiers" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Best Seller</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71xIgTqSN6L._AC_SL400_.jpg" alt="LEVOIT Top Fill Humidifier" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>LEVOIT Top Fill Humidifier</h3>
+                                <p class="description">Breathe easier and sleep better! Our top-fill humidifier runs whisper-quiet at just 28dB, adding soothing moisture to dry air while you rest. Easy to fill, easy to clean - perfect for bedrooms and nurseries.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Top Fill</span>
+                                    <span class="highlight-tag"> 28dB Quiet</span>
+                                    <span class="highlight-tag"> Auto Shut-off</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 28,901</span>
+                                </div>
+                                <a href="product-levoit-humidifier.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Bedrooms</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Smart</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71YxUFC4ZlL._AC_SL400_.jpg" alt="LEVOIT 6L Smart Humidifier" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>LEVOIT 6L Smart Humidifier</h3>
+                                <p class="description">Control your comfort from anywhere! This smart humidifier works with Alexa and Google Home, letting you adjust humidity levels with just your voice. The 6L tank runs for days, and the built-in oil diffuser fills your home with soothing scents.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> App Control</span>
+                                    <span class="highlight-tag"> Voice Control</span>
+                                    <span class="highlight-tag"> Oil Diffuser</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 15,678</span>
+                                </div>
+                                <a href="product-levoit-6l-humidifier.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Large Rooms</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Smart Home</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71FXkpypl6L._AC_SY400_.jpg" alt="DREO 6L Smart Humidifier" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>DREO 6L Smart Humidifier</h3>
+                                <p class="description">Sleep like a baby with perfect humidity! Our smart humidifier maintains optimal moisture levels while you sleep, with a whisper-quiet mode and impressive 60-hour runtime. Your skin and respiratory system will thank you.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> 60hr Runtime</span>
+                                    <span class="highlight-tag"> Sleep Mode</span>
+                                    <span class="highlight-tag"> Ultrasonic</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.6 | 8,901</span>
+                                </div>
+                                <a href="product-dreo-humidifier.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Smart Home</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="aromatherapy" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Popular</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61h2tXuDjjL._AC_SL400_.jpg" alt="COCODOR Flower Reed Diffuser" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>COCODOR Flower Reed Diffuser</h3>
+                                <p class="description">Transform any room into a spa! Our reed diffuser features real Baby's Breath flowers and luxurious White Jasmine scent that lasts up to 90 days. Perfect for creating a relaxing atmosphere in your bathroom or bedroom.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Real Flowers</span>
+                                    <span class="highlight-tag"> Jasmine Scent</span>
+                                    <span class="highlight-tag"> 90 Days</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.7 | 12,345</span>
+                                </div>
+                                <a href="product-cocodor-diffuser.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Bathroom</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Fresh</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61j2ZPYUxHL._AC_SL400_.jpg" alt="Aromatika Lemongrass Diffuser" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Aromatika Lemongrass Diffuser</h3>
+                                <p class="description">Natural lemongrass essential oil diffuser with bamboo sticks. Fresh citrus aroma.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Lemongrass</span>
+                                    <span class="highlight-tag"> Bamboo Sticks</span>
+                                    <span class="highlight-tag"> Citrus Aroma</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.6 | 8,765</span>
+                                </div>
+                                <a href="product-aromatika-diffuser.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Office</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Editor's Choice</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71z20jxb5QL._AC_SL400_.jpg" alt="Cocorrína Premium Reed Diffuser" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Cocorrína Premium Reed Diffuser</h3>
+                                <p class="description">Elegant reed diffuser with preserved baby's breath and cotton stick. Sandalwood Rose scent.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Elegant Design</span>
+                                    <span class="highlight-tag"> Sandalwood Rose</span>
+                                    <span class="highlight-tag"> Gift Ready</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 15,432</span>
+                                </div>
+                                <a href="product-aroma-diffuser.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Decorative</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="essential-oils" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Best Seller</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61iZ8xE2GQL._AC_SL400_.jpg" alt="Majestic Pure Eucalyptus Oil" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Majestic Pure Eucalyptus Oil</h3>
+                                <p class="description">100% pure and natural eucalyptus essential oil with glass dropper. Perfect for diffusers.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Glass Dropper</span>
+                                    <span class="highlight-tag"> 100% Pure</span>
+                                    <span class="highlight-tag"> Respiratory</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 18,901</span>
+                                </div>
+                                <a href="product-majestic-eucalyptus.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Congestion</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Organic</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/91vSXTik8DL._SL1500_.jpg" alt="PURA D'OR Organic Oil Set" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>PURA D'OR Organic Oil Set</h3>
+                                <p class="description">10-piece organic essential oil set with wooden gift box. Includes lavender, tea tree, lemon.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Wooden Box</span>
+                                    <span class="highlight-tag"> USDA Organic</span>
+                                    <span class="highlight-tag"> 10-Piece Set</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 14,567</span>
+                                </div>
+                                <a href="product-pura-dor-oils.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Gift Set</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Editor's Choice</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71h9xmOnLSL._AC_SL400_.jpg" alt="Nexon Botanics Essential Oil Set" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Nexon Botanics Essential Oil Set</h3>
+                                <p class="description">14 therapeutic-grade essential oils including lavender, tea tree, eucalyptus, and peppermint.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Therapeutic Grade</span>
+                                    <span class="highlight-tag"> 14-Piece Set</span>
+                                    <span class="highlight-tag"> Aromatherapy</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 22,345</span>
+                                </div>
+                                <a href="product-aromatherapy-oil.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Variety</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="ear-plugs" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Hi-Fi</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/61ND0D7QJyL._AC_SL400_.jpg" alt="Loop Experience 2 Ear Plugs" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Loop Experience 2 Ear Plugs</h3>
+                                <p class="description">High-fidelity hearing protection with 18dB noise reduction. Ultra-soft silicone.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> High Fidelity</span>
+                                    <span class="highlight-tag"> 18dB NRR</span>
+                                    <span class="highlight-tag"> Reusable</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 12,345</span>
+                                </div>
+                                <a href="product-ear-plugs.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Concerts</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Sleep</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71ehhn1B0sL._AC_SL400_.jpg" alt="Vosaf Sleeping Ear Plugs" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Vosaf Sleeping Ear Plugs</h3>
+                                <p class="description">Soft silicone ear plugs with 32dB noise reduction. Reusable, waterproof design perfect for sleeping.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Sleep Aid</span>
+                                    <span class="highlight-tag"> 32dB NRR</span>
+                                    <span class="highlight-tag"> Waterproof</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.7 | 8,765</span>
+                                </div>
+                                <a href="product-vosaf-earplugs.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Sleeping</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Overall Pick</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/51hHsqQulYL._AC_SL400_.jpg" alt="Loop Experience Ear Plugs" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>Loop Experience Ear Plugs</h3>
+                                <p class="description">High-fidelity hearing protection with 17dB noise reduction. Certified for concerts and festivals.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Concert Ready</span>
+                                    <span class="highlight-tag"> 17dB NRR</span>
+                                    <span class="highlight-tag"> Certified</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.9 | 18,901</span>
+                                </div>
+                                <a href="product-loop-experience.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Concerts</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div id="gua-sha" class="tab-content">
+                    <div class="product-grid">
+                        <div class="product-card">
+                            <span class="product-badge">Stainless</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/612eLhp7UoL._AC_SL400_.jpg" alt="PLANTIFIQUE Stainless Steel Gua Sha" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>PLANTIFIQUE Stainless Steel Gua Sha</h3>
+                                <p class="description">Premium stainless steel for cooling facial massage. Durable, water-resistant design.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Cooling</span>
+                                    <span class="highlight-tag"> Stainless Steel</span>
+                                    <span class="highlight-tag"> Waterproof</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 9,876</span>
+                                </div>
+                                <a href="product-plantifique-guasha.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Cooling</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge">Jade</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71DQoCwdLhL._AC_SL400_.jpg" alt="PLANTIFIQUE Jade Gua Sha" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>PLANTIFIQUE Jade Gua Sha Set</h3>
+                                <p class="description">Authentic jade stone for facial sculpting and jawline definition. Handcrafted with detailed guide.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> Natural Jade</span>
+                                    <span class="highlight-tag"> Handcrafted</span>
+                                    <span class="highlight-tag"> Detailed Guide</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star empty">★</span>
+                                    </div>
+                                    <span>4.7 | 6,543</span>
+                                </div>
+                                <a href="product-plantifique-jade-guasha.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best for Sculpting</span>
+                            </div>
+                        </div>
+                        <div class="product-card">
+                            <span class="product-badge special">Editor's Choice</span>
+                            <div class="product-image-container">
+                                <img src="https://m.media-amazon.com/images/I/71yoOvyYDBL._AC_SL400_.jpg" alt="BAIMEI Gua Sha & Jade Roller" width="400" height="400" loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3>BAIMEI Gua Sha & Jade Roller</h3>
+                                <p class="description">Natural jade stone for lymphatic drainage, facial sculpting, and reducing puffiness. Premium quality.</p>
+                                <div class="product-highlights">
+                                    <span class="highlight-tag"> 2-in-1 Set</span>
+                                    <span class="highlight-tag"> Natural Jade</span>
+                                    <span class="highlight-tag"> Lymphatic Drainage</span>
+                                </div>
+                                <div class="product-rating">
+                                    <div class="stars">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                    <span>4.8 | 25,678</span>
+                                </div>
+                                <a href="product-gua-sha.html" class="btn btn-primary" rel="sponsored nofollow">Learn More</a>
+                                <span class="product-use-case">Best Value</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-description">Find answers to common questions about our wellness products</p>
+                </div>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <button class="faq-question">What is a weighted blanket?</button>
+                        <div class="faq-answer">
+                            <p>A weighted blanket is a therapeutic blanket filled with materials like glass beads or plastic pellets to provide deep pressure stimulation, which can help reduce anxiety and improve sleep quality by mimicking the feeling of being hugged.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How do I choose the right weighted blanket weight?</button>
+                        <div class="faq-answer">
+                            <p>As a general rule, choose a blanket that weighs 10% of your body weight. For example, if you weigh 150 lbs, a 15 lb blanket would be ideal. For children, consult specific weight guidelines for their age and size.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">Are weighted blankets safe for children?</button>
+                        <div class="faq-answer">
+                            <p>Yes, weighted blankets can be safe for children aged 3 and above when used properly. Always follow weight guidelines (5-10% of body weight) and supervise younger children during use.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">How often should I replace my sleep mask?</button>
+                        <div class="faq-answer">
+                            <p>We recommend replacing your sleep mask every 6-12 months depending on usage. Regular cleaning is also important to maintain hygiene and extend the lifespan of your mask.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4> Healthy Living</h4>
+                    <p>Your trusted source for wellness product reviews and guides. We test products personally to bring you the best recommendations.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="#weighted-blankets">Weighted Blankets</a></li>
+                        <li><a href="#sleep-masks">Sleep Masks</a></li>
+                        <li><a href="#pillows">Pillows</a></li>
+                        <li><a href="#humidifiers">Humidifiers</a></li>
+                        <li><a href="#aromatherapy">Aromatherapy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Healthy Living. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                const tabId = tab.dataset.tab;
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.getElementById(tabId)?.classList.add('active');
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.slice(1);
+            if (hash && document.getElementById(hash)) {
+                tabs.forEach(t => t.classList.remove('active'));
+                document.querySelector(`.tab[data-tab="${hash}"]`)?.classList.add('active');
+                document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+                document.getElementById(hash)?.classList.add('active');
+            }
+
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active');
+                    const answer = question.nextElementSibling;
+                    answer.classList.toggle('active');
+                });
+            });
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.nav');
+            menuToggle?.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                nav?.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
